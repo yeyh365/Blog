@@ -1,0 +1,7 @@
+ 
+ 
+【日志时间】：2023-06-03 10:52:36,037 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 't.id' and '@__Search_Special_1' of different types in a query. This comparison will always return false. 
+ 

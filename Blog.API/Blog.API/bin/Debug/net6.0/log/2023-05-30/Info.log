@@ -1,0 +1,235 @@
+ 
+ 
+【日志时间】：2023-05-30 09:56:51,236 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 09:56:51,245 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 09:56:51,252 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 09:56:51,254 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 09:56:51,255 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\初始core6模板\GTSSolutions\GTSSolunstions.API\GTSSolunstion.API\ 
+  
+ 
+【日志时间】：2023-05-30 13:40:23,964 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 13:40:23,977 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 13:40:23,992 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 13:40:23,996 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 13:40:24,000 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\GTSSolunstions.API\Blog.API\ 
+  
+ 
+【日志时间】：2023-05-30 13:41:02,562 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 13:41:02,571 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 13:41:02,577 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 13:41:02,578 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 13:41:02,579 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\GTSSolunstions.API\Blog.API\ 
+  
+ 
+【日志时间】：2023-05-30 13:41:14,154 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-30 13:41:15,189 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-30 13:47:01,473 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 13:47:01,485 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 13:47:01,493 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 13:47:01,494 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 13:47:01,496 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\Blog.API\Blog.API\ 
+  
+ 
+【日志时间】：2023-05-30 13:47:12,402 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-30 13:47:13,058 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-30 13:49:45,887 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 13:49:45,892 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 13:49:45,894 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 13:49:45,894 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 13:49:45,895 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\Blog.API\Blog.API\ 
+  
+ 
+【日志时间】：2023-05-30 23:56:59,143 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-05-30 23:56:59,154 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-05-30 23:56:59,161 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-30 23:56:59,163 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-30 23:56:59,164 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\Blog.API\Blog.API\ 
+  
+ 
+【日志时间】：2023-05-30 23:57:09,768 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-05-30 23:58:15,775 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-05-30 23:58:22,838 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-05-30 23:58:46,190 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+ 

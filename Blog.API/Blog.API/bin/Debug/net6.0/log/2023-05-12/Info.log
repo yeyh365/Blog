@@ -1,0 +1,1332 @@
+ 
+ 
+【日志时间】：2023-05-12 11:31:10,475 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44390 
+  
+ 
+【日志时间】：2023-05-12 11:31:10,489 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5173 
+  
+ 
+【日志时间】：2023-05-12 11:31:10,495 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-12 11:31:10,496 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-12 11:31:10,498 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\GTSSolutions\GTSSolunstions.API\GTSSolunstion.API\ 
+  
+ 
+【日志时间】：2023-05-12 11:31:17,317 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:31:17,940 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (50ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:31:18,226 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 11:31:18,373 【线程ID】：6 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `contactus` AS `c`
+WHERE `c`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 11:31:18,438 【线程ID】：6 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `c`.`id`, `c`.`content`, `c`.`created`, `c`.`createdby`, `c`.`deleted`, `c`.`phone`, `c`.`title`, `c`.`updated`, `c`.`updatedby`
+FROM `contactus` AS `c`
+WHERE `c`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 11:47:47,523 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44390 
+  
+ 
+【日志时间】：2023-05-12 11:47:47,538 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5173 
+  
+ 
+【日志时间】：2023-05-12 11:47:47,545 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-12 11:47:47,547 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-12 11:47:47,548 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\GTSSolutions\GTSSolunstions.API\GTSSolunstion.API\ 
+  
+ 
+【日志时间】：2023-05-12 11:47:58,360 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:47:58,955 【线程ID】：6 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (51ms) [Parameters=[@__Account_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE (`a`.`deleted` = 0) AND (`a`.`account` = @__Account_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:47:59,253 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:47:59,337 【线程ID】：13 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__Account_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE (`a`.`deleted` = 0) AND (`a`.`account` = @__Account_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:48:05,193 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:48:05,289 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (16ms) [Parameters=[@__Dto_Account_0='?' (Size = 4000), @__Dto_PassWord_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE (`a`.`deleted` = 0) AND ((`a`.`account` = @__Dto_Account_0) AND (`a`.`password` = @__Dto_PassWord_1))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:48:47,578 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44390 
+  
+ 
+【日志时间】：2023-05-12 11:48:47,588 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5173 
+  
+ 
+【日志时间】：2023-05-12 11:48:47,593 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-05-12 11:48:47,595 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-05-12 11:48:47,596 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\GTSSolutions\GTSSolunstions.API\GTSSolunstion.API\ 
+  
+ 
+【日志时间】：2023-05-12 11:49:18,572 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:49:19,161 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (52ms) [Parameters=[@__Dto_Account_0='?' (Size = 4000), @__Dto_PassWord_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE (`a`.`deleted` = 0) AND ((`a`.`account` = @__Dto_Account_0) AND (`a`.`password` = @__Dto_PassWord_1))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:19,411 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:49:19,536 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (20ms) [Parameters=[@__Account_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE (`a`.`deleted` = 0) AND (`a`.`account` = @__Account_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:19,653 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 11:49:47,601 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:49:47,602 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 11:49:47,665 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-12 11:49:47,685 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:47,925 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,027 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,112 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,173 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,228 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,279 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,327 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,391 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,455 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (16ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,515 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,566 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,619 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,669 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 11:49:48,719 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:12,709 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:12,714 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:12,781 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (20ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:12,782 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-12 12:47:12,857 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:12,914 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:12,962 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,012 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,060 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,119 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (15ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,169 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,218 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,260 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,311 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (16ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,356 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,410 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (17ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,494 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (16ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:13,549 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (21ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,373 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:16,415 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (8ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,476 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,524 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,562 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,602 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_0 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,642 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (8ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,682 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (8ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,722 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:16,772 【线程ID】：21 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (17ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:17,989 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:18,162 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (54ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,298 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,486 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,564 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,686 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (46ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,773 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,859 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:18,903 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,024 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (49ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,069 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,120 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,217 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,326 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (33ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,384 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:19,442 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (17ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,023 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:28,025 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:28,072 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,073 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,147 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,208 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,255 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,300 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,350 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,395 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,444 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,496 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,547 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,591 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,634 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,697 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,746 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:28,803 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (19ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,196 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:33,197 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:33,246 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,247 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,315 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,374 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,420 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,470 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,514 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,563 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,611 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,657 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,702 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,746 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,796 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,845 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,897 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (13ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:33,939 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:34,968 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:34,971 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.0' with options: ServerVersion 5.6.45-mysql  
+  
+ 
+【日志时间】：2023-05-12 12:47:35,020 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `l`.`id`, `l`.`account`, `l`.`created`, `l`.`createdby`, `l`.`deleted`, `l`.`description`, `l`.`ip`, `l`.`name`, `l`.`type`, `l`.`updated`, `l`.`updatedby`
+FROM `log` AS `l`
+WHERE (`l`.`deleted` = 0) AND (`l`.`name` = @__DataModel_Name_0)
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,021 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND (`d`.`name` = 'Role') 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,092 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000), @p3='?' (DbType = UInt64), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+INSERT INTO `log` (`account`, `created`, `createdby`, `deleted`, `description`, `ip`, `name`, `type`, `updated`, `updatedby`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `id`
+FROM `log`
+WHERE ROW_COUNT() = 1 AND `id` = LAST_INSERT_ID(); 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,152 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND `d`.`name` IN ('Province', 'City', 'County') 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,205 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='120']
+SELECT COUNT(*)
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,255 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='120']
+SELECT `a`.`id`, `a`.`account`, `a`.`city`, `a`.`county`, `a`.`created`, `a`.`createdby`, `a`.`deleted`, `a`.`name`, `a`.`password`, `a`.`post`, `a`.`province`, `a`.`updated`, `a`.`updatedby`
+FROM `administrator` AS `a`
+WHERE `a`.`deleted` = 0
+ORDER BY `a`.`id` DESC
+LIMIT @__p_1 OFFSET @__p_0 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,303 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,346 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (9ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,398 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (18ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,441 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,492 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,540 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,585 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (12ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,637 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (14ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,686 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (10ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+  
+ 
+【日志时间】：2023-05-12 12:47:35,733 【线程ID】：15 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (11ms) [Parameters=[@__x_Post_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+SELECT `d`.`id`, `d`.`created`, `d`.`createdby`, `d`.`deleted`, `d`.`key`, `d`.`name`, `d`.`parentkey`, `d`.`remark`, `d`.`slot`, `d`.`updated`, `d`.`updatedby`, `d`.`value`
+FROM `dictionary` AS `d`
+WHERE (`d`.`deleted` = 0) AND ((`d`.`name` = 'Role') AND (`d`.`key` = @__x_Post_0))
+LIMIT 1 
+ 

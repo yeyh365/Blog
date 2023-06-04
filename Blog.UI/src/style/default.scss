@@ -1,0 +1,7 @@
+//变量scss
+@import './variables.scss';
+
+//背景颜色
+// $background-color: #FCFDFE;
+
+$background-color: var(--theme);

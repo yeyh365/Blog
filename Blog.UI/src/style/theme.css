@@ -1,0 +1,81 @@
+:root.light {
+    /* 头部背景 */
+    --headBackground: #FCFDFE;
+
+    /* 菜单字体颜色 */
+    --menuText: #4e5358;
+
+    /* 菜单活动字体颜色 */
+    --menuTextActive: #00a2e3;
+
+    /* 主体背景色 */
+    --mainBackground: #F5F6F7;
+
+    /* 用户框背景色 */
+    --userBackground: #ffffff;
+
+    /* 手机端用户框背景色 */
+    --userBackgroundPhone: #fff;
+
+    /* 头部登录框背景色 */
+    --headLoginBackground: #FCFDFE;
+
+    /* 资源卡片背景色 */
+    --materialCardBackground: #FFFFFF;
+    /* 资源卡片标题颜色  一级标题*/
+    --materialCardText: #4E5358;
+    /* 资源卡片内容颜色  二级标题*/
+    --materialCardContent: #777;
+    /* 资源卡片其他文字颜色 三级标题 */
+    --materialCardContent: #989898;
+
+    /* 页面背景色 */
+    --pageBackground: #fff;
+    /* 页面标题 */
+    --pageTitle: #4e5358;
+    /* 页面边框颜色 */
+    --pageBorder: #e4e7ed;
+
+
+    /* 过滤选项字颜色 */
+    --filterText: #999;
+    --filterHeadeText: #4e5358;
+
+    /* 个人中心背景色 */
+    --userDataBackground: #f5f6f7;
+    /* 个人中心无数据背景色 */
+    --userEmptybackground: #fff;
+
+    /* el-input 背景色 */
+    --elInputBackground:#FFFFFF;
+    /* el-input 边框颜色 */
+    --elInputBorder:#DCDFE6;
+
+}
+
+:root.dark {
+    --headBackground: #292A2D;
+    --menuText: #e5eef7;
+    --menuTextActive: #00a2e3;
+    --mainBackground: #292A2D;
+    --userBackground: #323335;
+    --userBackgroundPhone: #323335;
+    --headLoginBackground: #323335;
+    --materialCardBackground: #323335;
+    --materialCardText: #E5EEF7;
+    --materialCardContent: #b4b6bb;
+    --pageBackground: #323335;
+    --pageTitle: #e5eef7;
+    --filterText: #888a8f;
+    --filterHeadeText: #e5eef7;
+    --materialCardContent: #989898;
+    --pageBorder: #303133;
+    --userDataBackground: #292A2D;
+    --elInputBackground:#75787C;
+    --elInputBorder:#75787C;
+
+
+
+
+
+}

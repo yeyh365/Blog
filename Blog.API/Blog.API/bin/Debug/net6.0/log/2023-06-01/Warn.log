@@ -1,0 +1,43 @@
+ 
+ 
+【日志时间】：2023-06-01 13:17:12,508 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 't.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:17:12,510 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 't.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:20:16,594 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 'd.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:20:16,598 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 'd.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:21:57,724 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 'd.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:21:57,727 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and 'd.id' of different types in a query. This comparison will always return false. 
+  
+ 
+【日志时间】：2023-06-01 13:53:41,062 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Query 
+【日志内容】：Possible unintended use of method 'Equals' for arguments 'k.typeid' and '@__x_Id_0' of different types in a query. This comparison will always return false. 
+ 
