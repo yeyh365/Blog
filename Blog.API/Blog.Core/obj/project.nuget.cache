@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8EPOXn8NKqPgaHXulV+Dt/tXxCfgO69Ejhk5BxeKO6ZHl0SlOHc6gHTXR4oEiBSaIRrnQecZoSwlIzqsCfUg8Q==",
+  "dgSpecHash": "JkEfevBa7onBMx34tncidmHRopV5lBu8LfXzrZx5PcYE38RaLn45LwXp7iJiDOd3uVkiXDuWHZvZYse9IEmlXg==",
   "success": true,
   "projectFilePath": "E:\\blog\\Blog.API\\Blog.Core\\Blog.Core.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []

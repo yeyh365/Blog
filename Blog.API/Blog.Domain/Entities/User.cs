@@ -32,6 +32,11 @@
         /// </summary>
         [Column("account")]
         public string? Account { get; set; } = string.Empty;
+        /// <summary>
+        /// 用户密码
+        /// </summary>
+        [Column("email")]
+        public string? Email { get; set; } = string.Empty;
 
         /// <summary>
         /// 用户密码

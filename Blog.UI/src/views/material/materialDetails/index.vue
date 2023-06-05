@@ -250,7 +250,7 @@ export default {
           this.materialData.BrowseNum++;
         }
       })
-          }, 3000);
+          }, 5000);
         } else {
           this.haveDate = false;
         }

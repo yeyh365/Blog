@@ -317,3 +317,5 @@ E:\blog\Blog.API\Blog.API\obj\Debug\net6.0\Blog.API.genruntimeconfig.cache
 E:\blog\Blog.API\Blog.API\obj\Debug\net6.0\ref\Blog.API.dll
 E:\blog\Blog.API\Blog.API\bin\Debug\net6.0\Blog.API.staticwebassets.runtime.json
 E:\blog\Blog.API\Blog.API\obj\Debug\net6.0\Blog.API.MvcApplicationPartsAssemblyInfo.cs
+E:\blog\Blog.API\Blog.API\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+E:\blog\Blog.API\Blog.API\bin\Debug\net6.0\StackExchange.Redis.dll

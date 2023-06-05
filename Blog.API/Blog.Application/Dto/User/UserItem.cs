@@ -29,6 +29,10 @@ namespace Blog.Application.Dto
         /// 用户账号
         /// </summary>
         public string? Account { get; set; } = string.Empty;
+        /// <summary>
+        /// 用户邮箱
+        /// </summary>
+        public string? Email { get; set; } = string.Empty;
 
         /// <summary>
         /// 用户密码
@@ -54,6 +58,10 @@ namespace Blog.Application.Dto
         /// 区/县
         /// </summary>
         public string? County { get; set; } = string.Empty;
+        /// <summary>
+        /// 区/县
+        /// </summary>
+        public int? Code { get; set; }
     }
 
     public class UserLogin
@@ -62,7 +70,10 @@ namespace Blog.Application.Dto
         /// 用户账号
         /// </summary>
         public string? Account { get; set; } = string.Empty;
-
+        /// <summary>
+        /// 用户密码
+        /// </summary>
+        public string? Email { get; set; } = string.Empty;
         /// <summary>
         /// 用户密码
         /// </summary>

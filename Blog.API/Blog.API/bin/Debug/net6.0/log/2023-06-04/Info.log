@@ -49549,4 +49549,1014 @@ SET NOCOUNT ON;
 UPDATE [dbo].[interaction] SET [articleid] = @p0, [attentionuserid] = @p1, [deleted] = @p2, [remark] = @p3, [status] = @p4, [typename] = @p5, [updated] = @p6, [updatedby] = @p7, [userid] = @p8
 WHERE [id] = @p9;
 SELECT @@ROWCOUNT; 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,189 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,199 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,421 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,508 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,589 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,595 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__Search_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[id], [a].[articlecontent], [a].[articlecontenturl], [a].[articleid], [a].[articletitle], [a].[browsenum], [a].[coverimgid], [a].[coverimgurl], [a].[created], [a].[createdby], [a].[deleted], [a].[isappeal], [a].[remark], [a].[status], [a].[updated], [a].[updatedby], [a].[userid]
+FROM [dbo].[article] AS [a]
+WHERE ([a].[deleted] = CAST(0 AS bit)) AND ([a].[id] = @__Search_Id_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,637 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (40ms) [Parameters=[@__x_UserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND (@__x_UserId_0 = [u].[id]) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,676 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,681 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Collection') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,726 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Thumbs') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,764 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[comment] AS [c]
+WHERE ([c].[deleted] = CAST(0 AS bit)) AND ([c].[articleid] = @__Id_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,769 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (41ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Browse') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,808 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[id], [c].[articleid], [c].[conparentkey], [c].[content], [c].[created], [c].[createdby], [c].[deleted], [c].[fromuserid], [c].[remark], [c].[replyuserid], [c].[updated], [c].[updatedby]
+FROM [dbo].[comment] AS [c]
+WHERE (([c].[deleted] = CAST(0 AS bit)) AND ([c].[articleid] = @__Id_0)) AND ([c].[replyuserid] = 0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,814 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'ClassIfication') 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,852 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_FromUserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__x_FromUserId_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,858 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Label') 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,902 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (48ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[id], [c].[articleid], [c].[conparentkey], [c].[content], [c].[created], [c].[createdby], [c].[deleted], [c].[fromuserid], [c].[remark], [c].[replyuserid], [c].[updated], [c].[updatedby]
+FROM [dbo].[comment] AS [c]
+WHERE ([c].[deleted] = CAST(0 AS bit)) AND ([c].[conparentkey] = @__x_Id_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,903 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Special') 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,948 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__y_FromUserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__y_FromUserId_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:35,992 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__y_ReplyUserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__y_ReplyUserId_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:36,037 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__y_FromUserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__y_FromUserId_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:36,082 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__y_ReplyUserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__y_ReplyUserId_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:40,917 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:40,962 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:41,047 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:41,180 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[interaction] ([articleid], [attentionuserid], [created], [createdby], [deleted], [remark], [status], [typename], [updated], [updatedby], [userid])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [dbo].[interaction]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:52,921 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:52,922 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:52,967 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] LIKE N'') OR (CHARINDEX([k].[name], @__type_0) > 0)) 
+  
+ 
+【日志时间】：2023-06-04 23:26:52,968 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,011 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (41ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'MaterialName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,059 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'MaterialName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,066 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (45ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,111 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'MaterialName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,156 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'MaterialName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,158 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[id], [m].[bannerurl], [m].[browsenum], [m].[created], [m].[createdby], [m].[deleted], [m].[likenum], [m].[materialcover], [m].[materialcoverid], [m].[materialdescribe], [m].[materialdetails], [m].[materiallink], [m].[materialname], [m].[remark], [m].[status], [m].[updated], [m].[updatedby], [m].[userid]
+FROM [dbo].[material] AS [m]
+WHERE [m].[deleted] = CAST(0 AS bit) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,201 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,245 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,289 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,336 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (44ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,381 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,429 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,475 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (44ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,520 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,567 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,613 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,660 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,705 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,751 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,796 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,840 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,886 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,931 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:53,978 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,022 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,066 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,109 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (41ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,153 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,198 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:54,241 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (41ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,622 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,668 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,755 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,845 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__Search_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[id], [m].[bannerurl], [m].[browsenum], [m].[created], [m].[createdby], [m].[deleted], [m].[likenum], [m].[materialcover], [m].[materialcoverid], [m].[materialdescribe], [m].[materialdetails], [m].[materiallink], [m].[materialname], [m].[remark], [m].[status], [m].[updated], [m].[updatedby], [m].[userid]
+FROM [dbo].[material] AS [m]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND ([m].[id] = @__Search_Id_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,889 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'LikeMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,933 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'BrowseMaterial') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:26:55,979 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[materialarticlekeywords] AS [m]
+INNER JOIN (
+    SELECT [k].[id], [k].[typeid], [k].[typename]
+    FROM [dbo].[keywords] AS [k]
+    WHERE [k].[deleted] = CAST(0 AS bit)
+) AS [t] ON [m].[keywordsid] = [t].[id]
+WHERE ([m].[deleted] = CAST(0 AS bit)) AND (([m].[materialarticleid] = @__x_Id_0) AND ([m].[type] = N'Materia')) 
+  
+ 
+【日志时间】：2023-06-04 23:26:56,029 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__DataModel_Userid_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND ([u].[id] = @__DataModel_Userid_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:59,058 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:26:59,104 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:26:59,190 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:26:59,335 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (50ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[interaction] ([articleid], [attentionuserid], [created], [createdby], [deleted], [remark], [status], [typename], [updated], [updatedby], [userid])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [dbo].[interaction]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:27:19,903 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:27:19,905 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Infrastructure 
+【日志内容】：Entity Framework Core 6.0.0 initialized 'EFDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+  
+ 
+【日志时间】：2023-06-04 23:27:19,950 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] LIKE N'') OR (CHARINDEX([k].[name], @__type_0) > 0)) 
+  
+ 
+【日志时间】：2023-06-04 23:27:19,951 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__DataModel_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[id], [l].[account], [l].[created], [l].[createdby], [l].[deleted], [l].[description], [l].[ip], [l].[name], [l].[type], [l].[updated], [l].[updatedby]
+FROM [dbo].[log] AS [l]
+WHERE ([l].[deleted] = CAST(0 AS bit)) AND ([l].[name] = @__DataModel_Name_0) 
+  
+ 
+【日志时间】：2023-06-04 23:27:19,997 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (44ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'ArticleName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,039 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[log] ([account], [created], [createdby], [deleted], [description], [ip], [name], [type], [updated], [updatedby])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [id]
+FROM [dbo].[log]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity(); 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,042 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'ArticleName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,088 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [k].[id], [k].[created], [k].[createdby], [k].[deleted], [k].[describe], [k].[imgurl], [k].[name], [k].[parentkey], [k].[remark], [k].[sort], [k].[typeid], [k].[typename], [k].[updated], [k].[updatedby]
+FROM [dbo].[keywords] AS [k]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND (([k].[name] = N'ArticleName') AND (@__x_Id_0 = [k].[parentkey])) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,126 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[id], [a].[articlecontent], [a].[articlecontenturl], [a].[articleid], [a].[articletitle], [a].[browsenum], [a].[coverimgid], [a].[coverimgurl], [a].[created], [a].[createdby], [a].[deleted], [a].[isappeal], [a].[remark], [a].[status], [a].[updated], [a].[updatedby], [a].[userid]
+FROM [dbo].[article] AS [a]
+WHERE [a].[deleted] = CAST(0 AS bit) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,172 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (44ms) [Parameters=[@__x_UserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND (@__x_UserId_0 = [u].[id]) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,217 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (41ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Collection') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,261 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Thumbs') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,305 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Browse') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,351 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_UserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[id], [u].[account], [u].[city], [u].[county], [u].[created], [u].[createdby], [u].[deleted], [u].[name], [u].[password], [u].[photo], [u].[post], [u].[province], [u].[updated], [u].[updatedby]
+FROM [dbo].[user] AS [u]
+WHERE ([u].[deleted] = CAST(0 AS bit)) AND (@__x_UserId_0 = [u].[id]) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,395 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Collection') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,439 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (42ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Thumbs') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,485 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [dbo].[interaction] AS [i]
+WHERE ([i].[deleted] = CAST(0 AS bit)) AND ((([i].[typename] = N'Browse') AND ([i].[articleid] = @__x_Id_0)) AND ([i].[status] = CAST(1 AS bit))) 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,532 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'ClassIfication') 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,577 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Label') 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,621 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Special') 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,668 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (44ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'ClassIfication') 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,714 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Label') 
+  
+ 
+【日志时间】：2023-06-04 23:27:20,760 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：INFO  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Command 
+【日志内容】：Executed DbCommand (43ms) [Parameters=[@__x_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[id] AS [Id], [t].[typeid] AS [TypeId], [t].[typename] AS [TypeName]
+FROM [dbo].[keywords] AS [k]
+INNER JOIN (
+    SELECT [k0].[id], [k0].[parentkey], [k0].[typeid], [k0].[typename]
+    FROM [dbo].[keywords] AS [k0]
+    WHERE [k0].[deleted] = CAST(0 AS bit)
+) AS [t] ON [k].[id] = [t].[parentkey]
+INNER JOIN (
+    SELECT [m].[keywordsid]
+    FROM [dbo].[materialarticlekeywords] AS [m]
+    WHERE (([m].[deleted] = CAST(0 AS bit)) AND ([m].[type] = N'Article')) AND ([m].[materialarticleid] = @__x_Id_0)
+) AS [t0] ON [t].[id] = [t0].[keywordsid]
+WHERE ([k].[deleted] = CAST(0 AS bit)) AND ([k].[typeid] = N'Special') 
+  
+ 
+【日志时间】：2023-06-04 23:47:42,837 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: https://localhost:44391 
+  
+ 
+【日志时间】：2023-06-04 23:47:42,843 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Now listening on: http://localhost:5174 
+  
+ 
+【日志时间】：2023-06-04 23:47:42,845 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Application started. Press Ctrl+C to shut down. 
+  
+ 
+【日志时间】：2023-06-04 23:47:42,846 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Hosting environment: Development 
+  
+ 
+【日志时间】：2023-06-04 23:47:42,846 【线程ID】：1 
+【日志级别】：INFO  
+【日志对象】：Microsoft.Hosting.Lifetime 
+【日志内容】：Content root path: E:\blog\Blog.API\Blog.API\ 
  

@@ -4,8 +4,8 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
-        "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve"
+        "build": " vue-cli-service build",
+        "dev": " vue-cli-service serve"
     },
     "dependencies": {
         "@moefe/vue-aplayer": "^2.0.0-beta.5",

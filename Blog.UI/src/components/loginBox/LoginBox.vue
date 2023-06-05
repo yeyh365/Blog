@@ -195,6 +195,7 @@
 
 <script>
 import { getRegisterCode, userRegister } from "@/api/login/index";
+import LoginService from "@/api/services/LoginService"
 
 //引入vuex
 import store from "@/store";
@@ -220,7 +221,6 @@ export default {
         email: "",
         password: "",
       },
-
       //登录按钮loading状态
       loginLoading: false,
 
@@ -302,7 +302,7 @@ export default {
         if (valid) {
           this.loginLoading = true;
           const { email, password } = this.loginForm;
-          const data = { email, password: this.$utils.md5(password) };
+          const data = { email, password };
           store.dispatch("Login", data).then((res) => {
             if (!res) {
               this.loginLoading = false;
@@ -311,7 +311,7 @@ export default {
             //判断有没有用户信息
             if (!store.state.user.info) {
               //获取用户信息
-              store.dispatch("GetInfo");
+              //store.dispatch("GetInfo");
             }
             setTimeout(() => {
               this.$notify({
@@ -347,22 +347,43 @@ export default {
       this.$refs.registerForm.validateField("nickname", (havaName) => {
         if (!havaName) {
           this.$refs.registerForm.validateField("email", (validate) => {
-            this.getCodeLoading = true;
+
             if (!validate) {
               const data = {
-                email: this.registerForm.email,
-                nickname: this.registerForm.nickname,
+                Email: this.registerForm.email,
+                Account: this.registerForm.nickname,
+                Password: this.registerForm.password,
               };
-              getRegisterCode(data).then((res) => {
-                this.getCodeLoading = false;
-                if (res.data == "true") {
+              LoginService.GetCode(data).then(res=>{
+                if (res.Code == 200) {
+              this.getCodeLoading = true;
                   this.$notify({
                     title: "邮件发送成功",
-                    message: "请在邮箱内查看验证码，验证码有效时间为10分钟！",
+                    message: "请在邮箱内查看验证码，验证码有效时间为5分钟！",
                     type: "success",
                   });
-                }
+                }else
+            {
+               this.$notify({
+                title: "发送失败！",
+                message: "发送失败！！",
+                type: "success",
               });
+            }
+              })
+
+
+
+              // getRegisterCode(data).then((res) => {
+              //   this.getCodeLoading = false;
+              //   if (res.data == "true") {
+              //     this.$notify({
+              //       title: "邮件发送成功",
+              //       message: "请在邮箱内查看验证码，验证码有效时间为5分钟！",
+              //       type: "success",
+              //     });
+              //   }
+              // });
             }
           });
         }
@@ -371,24 +392,49 @@ export default {
 
     //用户注册
     registerUser() {
+      console.log('111',this.registerForm);
       this.$refs.registerForm.validate((validate) => {
         if (validate) {
           this.registerLoading = true;
-          const data = Object.assign({}, this.registerForm);
+          //const data = Object.assign({}, this.registerForm);
+        const data = {
+                Email: this.registerForm.email,
+                Account: this.registerForm.nickname,
+                Password: this.registerForm.password,
+                Code: this.registerForm.code,
+              };
           //密码md5加密
-          data.password = this.$utils.md5(data.password);
-          data.againPassword = this.$utils.md5(data.againPassword);
-          userRegister(data).then((res) => {
-            this.registerLoading = false;
-            if (res.code == 200) {
+          //data.password = this.$utils.md5(data.password);
+          //data.againPassword = this.$utils.md5(data.againPassword);
+          LoginService.RegisterUser(data).then(res=>{
+              this.registerLoading = false;
+            if (res.Code == 200) {
               this.showLoginFrom = true;
               this.$notify({
                 title: "注册成功！",
                 message: "你以成功进行注册，现在可以进行登录啦！",
                 type: "success",
               });
+            }else
+            {
+               this.$notify({
+                title: "注册失败！",
+                message: "注册失败！！",
+                type: "success",
+              });
             }
-          });
+          })
+          // userRegister(data).then((res) => {
+          //   this.registerLoading = false;
+          //   if (res.code == 200) {
+          //     this.showLoginFrom = true;
+          //     this.$notify({
+          //       title: "注册成功！",
+          //       message: "你以成功进行注册，现在可以进行登录啦！",
+          //       type: "success",
+          //     });
+          //   }
+          // });
         }
       });
     },

@@ -67,6 +67,19 @@ namespace Blog.Application.Services
         /// <returns></returns>
        UserDto Login(UserLogin Dto);
         /// <summary>
+        /// 注册用户
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<ResultModel> RegisterUser(UserItem Dto, CancellationToken cancellationToken);
+        /// <summary>
+        /// 发送验证码
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <returns></returns>
+       int SendCode(UserLogin Dto);
+        /// <summary>
         /// 根据Token获取用户信息
         /// </summary>
         /// <param name="cancellationToken"></param>

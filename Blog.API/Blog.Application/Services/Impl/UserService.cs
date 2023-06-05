@@ -21,6 +21,9 @@ using Blog.Core.Helper;
 using System.Security.Claims;
 using NPOI.POIFS.Crypt.Dsig;
 using NPOI.POIFS.Properties;
+using Blog.EntityFrameworkCore.Redis;
+using NPOI.SS.Formula.Functions;
+using System.Text.RegularExpressions;
 
 namespace Blog.Application.Services.Impl
 {
@@ -263,7 +266,17 @@ namespace Blog.Application.Services.Impl
         /// <returns></returns>
         public UserDto Login(UserLogin Dto)
         {
-            var Admin =  _UserRepository.Get(u => u.Account == Dto.Account && u.PassWord == Dto.PassWord).FirstOrDefault();
+            var Admin = new User();
+            string patten1 = @"^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            if (Regex.IsMatch(Dto.Account, patten1))
+            {
+                 Admin = _UserRepository.Get(u => u.Email == Dto.Account && u.PassWord == Dto.PassWord).FirstOrDefault();
+            }
+            else
+            {
+                Admin = _UserRepository.Get(u => u.Account == Dto.Account && u.PassWord == Dto.PassWord).FirstOrDefault();
+            }
+              
             UserDto result = new UserDto();
             if (Admin != null)
             {
@@ -274,6 +287,74 @@ namespace Blog.Application.Services.Impl
                 result = null;
             }
             return result;
+        }
+        /// <summary>
+        /// 注册用户
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<ResultModel> RegisterUser(UserItem Dto, CancellationToken cancellationToken)
+        {
+            ResultModel result = new ResultModel();
+            var DataModel = _mapper.Map<User>(Dto);
+            int code = 0;
+            if (!string.IsNullOrEmpty(Dto.Email))
+            {
+                 code = Convert.ToInt32(new RedisHelper().GetStringValue(Dto.Email)) ;
+            }
+            if (Dto.Code != code)
+            {
+                result.Code = ResultCode.NotFound;
+                result.Message = "验证码不正确";
+                return result;
+            }
+            var CheckModel = this._UserRepository.Get(x => x.Account == DataModel.Account).FirstOrDefault();
+            if (CheckModel != null)
+            {
+                result.Code = ResultCode.NotFound;
+                result.Message = "用户已存在";
+                return result;
+            }
+            var CheckModel1 = this._UserRepository.Get(x => x.Email == DataModel.Email).FirstOrDefault();
+            if (CheckModel != null)
+            {
+                result.Code = ResultCode.NotFound;
+                result.Message = "邮箱已存在";
+                return result;
+            }
+            using (var trans = this._context.BeginTrainsaction())
+            {
+                DataModel.PassWord = MD5Helper.Md5Method(DataModel.PassWord);
+                _UserRepository.Insert(DataModel);
+                await this._context.SaveChangesAsync(cancellationToken);
+                trans.Commit();
+                result.Message = "创建成功！";
+                result.Data = DataModel;
+            }
+            return result;
+        }
+        /// <summary>
+        /// 发送注册验证码
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public int SendCode(UserLogin Dto)
+        {
+            
+            UserDto result = new UserDto();
+            //Dto.Email = "yeyh365@163.com";
+            int code = new Random().Next(100000, 999999);
+            SendEmail(Dto.Email, code);
+            ///存redis
+            string Account = Dto.Email;
+            int Code = code;
+            string time = "5";
+            RedisHelper redis = new RedisHelper();
+            redis.SetStringKey(Account, code, int.Parse(time));
+
+            return code;
         }
 
         /// <summary>
@@ -312,7 +393,26 @@ namespace Blog.Application.Services.Impl
 
             return result;
         }
-
+        public void SendEmail(string TO,int Code)
+        {
+            EmailHelper email = new EmailHelper();
+            EmailModel emailModel = new EmailModel();
+            emailModel.From = "yeyh365@163.com";
+            emailModel.To = new List<string>()
+            {
+               TO
+            };
+            emailModel.Subject = "博客验证码";
+            emailModel.Body = $"本次验证码为{Code},有效期为5分钟";
+            emailModel.IsBodyHtml = false;
+            emailModel.Host = "smtp.163.com";
+            emailModel.Port = 25;
+            emailModel.UserName = "yeyh365@163.com";
+            emailModel.Password = "RSVRHNSGXTMGCWTC";
+            emailModel.MailPriority = System.Net.Mail.MailPriority.Normal;
+            emailModel.Encoding = Encoding.UTF8;
+            email.Send(emailModel);
+        }
         #endregion
     }
 }

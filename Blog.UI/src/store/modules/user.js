@@ -8,6 +8,7 @@
 
 //引入登录方法
 import { login, getUserInfo, logout } from "@/api/login/index";
+import LoginService from "@/api/services/LoginService"
 
 //设置token
 import { setToken, removeToken } from '@/utils/auth'
@@ -34,6 +35,26 @@ const user = {
         Login({ commit }, userInfo) {
             return new Promise((resolve, reject) => {
                 const data = { email: userInfo.email, password: userInfo.password }
+                LoginService.Login(data).then(response=>{
+                    //登录时发生错误
+                    if (response.code !== 200) {
+                        resolve(false)
+                        return
+                    }
+                    const token = response.data
+
+                    //vuex存token
+                    commit('SET_TOKEN', token)
+
+                    //本地存token
+                    setToken(token)
+
+                    //成功登录
+                    resolve(true)
+                    
+                }).catch(error => {
+                    reject(error)
+                })
                 login(data).then(response => {
 
                     //登录时发生错误
