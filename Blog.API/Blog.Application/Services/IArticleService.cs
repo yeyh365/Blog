@@ -70,6 +70,20 @@ namespace Blog.Application.Services
 
         Task<ResultModel> CreateInteraction(InteractionItme Itme, CancellationToken cancellationToken);
         Task<ResultModel> UpdateInteraction(InteractionItme Itme, CancellationToken cancellationToken);
+        /// <summary>
+        /// 增加一个文章评论
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<ResultModel> CreateArticleComment(CommentItem Dto, CancellationToken cancellationToken);
+        /// <summary>
+        /// 增加一个子级评论
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<ResultModel> CreateChildComment(CommentItem Dto, CancellationToken cancellationToken);
         #endregion
     }
 }

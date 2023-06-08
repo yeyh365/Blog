@@ -48,7 +48,7 @@ export default {
   UpdateUser(Info) {
     return new Promise((resolve, reject) => {
       axiosInstance
-        .put(`/User/UpdateUser`, Info)
+        .post(`/User/UpdateUser`, Info)
         .then((response) => {
           resolve(response.data)
         })

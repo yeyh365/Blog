@@ -24,10 +24,10 @@
           >
             <el-form-item
               label="名称"
-              prop="material_name"
+              prop="MaterialName"
             >
               <el-input
-                v-model="ruleForm.material_name"
+                v-model="ruleForm.MaterialName"
                 size="small"
                 placeholder="请输入资源名称"
                 clearable
@@ -51,11 +51,11 @@
             </el-form-item>
             <el-form-item
               label="描述"
-              prop="material_describe"
+              prop="MaterialDescribe"
             >
               <el-input
                 placeholder="请输入资源简短描述"
-                v-model="ruleForm.material_describe"
+                v-model="ruleForm.MaterialDescribe"
                 size="small"
                 clearable
                 maxlength="40"
@@ -65,11 +65,11 @@
             </el-form-item>
             <el-form-item
               label="链接"
-              prop="material_link"
+              prop="MaterialLink"
             >
               <el-input
                 placeholder="请输入正确的网址链接"
-                v-model="ruleForm.material_link"
+                v-model="ruleForm.MaterialLink"
                 size="small"
                 clearable
               >
@@ -81,7 +81,7 @@
             >
               <el-select
                 size="small"
-                v-model="ruleForm.label"
+                v-model="ruleForm.Label"
                 placeholder="请选择"
                 style="width:100%"
                 multiple
@@ -90,13 +90,13 @@
                 <el-option-group
                   v-for="(item,index) in materialOption"
                   :key="index"
-                  :label="item.material"
+                  :label="item.TypeName"
                 >
                   <el-option
-                    v-for="(value,key) in item.materialTypeOption"
-                    :key="value.id"
-                    :label="value.material_name"
-                    :value="value.id"
+                    v-for="(value,key) in item.Keywords"
+                    :key="value.Id"
+                    :label="value.TypeName"
+                    :value="value.Id"
                   >
                   </el-option>
                 </el-option-group>
@@ -104,7 +104,7 @@
             </el-form-item>
             <el-form-item
               label="LOGO"
-              prop="material_cover"
+              prop="MaterialCover"
             >
               <div class="upload-avatar">
                 <el-upload
@@ -118,8 +118,8 @@
                   :before-upload="beforeAvatarUpload"
                 >
                   <img
-                    v-if="ruleForm.material_cover"
-                    :src="$utils.imgUrl(ruleForm.material_cover)"
+                    v-if="ruleForm.MaterialCover"
+                    :src="$utils.imgUrl(ruleForm.MaterialCover)"
                     class="avatar"
                   />
                   <div v-else>
@@ -131,11 +131,11 @@
             </el-form-item>
             <el-form-item
               label="详情"
-              prop="material_details"
+              prop="MaterialDetails"
             >
               <el-input
                 placeholder="请介绍该资源的作用、用法"
-                v-model="ruleForm.material_details"
+                v-model="ruleForm.MaterialDetails"
                 size="small"
                 clearable
                 maxlength="200"
@@ -175,9 +175,9 @@
         <el-pagination
           background
           layout="prev, pager, next"
-          :total="pages.total"
-          :page-size='pages.list_rows'
-          :current-page='pages.page'
+          :Total="pages.Total"
+          :Page-size='pages.Limit'
+          :current-Page='pages.Page'
           @current-change='currentChange'
         >
         </el-pagination>
@@ -210,6 +210,7 @@ import {
   getMaterialByName,
   editMaterialRecommend,
 } from "@/api/material/materialRecommend";
+import MaterialService from "@/api/services/MaterialService"
 export default {
   name: "MaterialRecommend",
   components: {
@@ -219,18 +220,18 @@ export default {
     return {
       //表单数据
       ruleForm: {
-        material_name: "",
-        material_describe: "",
-        material_details: "",
-        material_link: "",
-        material_cover: "",
-        material_cover_id: "",
-        label: [],
+        MaterialName: "",
+        MaterialDescribe: "",
+        MaterialDetails: "",
+        MaterialLink: "",
+        MaterialCover: "",
+        MaterialCoverid: "",
+        Label: [],
       },
 
       //表单验证规则
       rules: {
-        material_name: [
+        MaterialName: [
           { required: true, message: "请输入资源名称", trigger: "blur" },
           {
             min: 1,
@@ -239,7 +240,7 @@ export default {
             trigger: "blur",
           },
         ],
-        material_describe: [
+        MaterialDescribe: [
           { required: true, message: "请输入资源描述", trigger: "blur" },
           {
             min: 1,
@@ -248,7 +249,7 @@ export default {
             trigger: "blur",
           },
         ],
-        material_link: [
+        MaterialLink: [
           { required: true, message: "请输入资源链接", trigger: "blur" },
           {
             pattern:
@@ -257,7 +258,7 @@ export default {
             trigger: "blur",
           },
         ],
-        material_details: [
+        MaterialDetails: [
           { required: true, message: "请输入资源详情", trigger: "blur" },
           {
             max: 200,
@@ -265,8 +266,8 @@ export default {
             trigger: "blur",
           },
         ],
-        label: [{ required: true, message: "资源标签必选", trigger: "change" }],
-        material_cover: [
+        Label: [{ required: true, message: "资源标签必选", trigger: "change" }],
+        MaterialCover: [
           { required: true, message: "LOGO必传", trigger: "blur" },
         ],
       },
@@ -294,11 +295,11 @@ export default {
 
       //分页参数
       pages: {
-        page: 1,
-        list_rows: 1,
-        total: 0,
+        Page: 1,
+        Limit: 1,
+        Total: 0,
       },
-
+      LoginUserId:'',
       //提交工具栏
       showSubmitUtils: false,
 
@@ -313,15 +314,24 @@ export default {
       this.isAdd = false;
       this.ruleForm = Object.assign({}, JSON.parse(this.$route.query.data));
     }
+     this.LoginUserId=this.$store.getters.userId;
 
+     this.LoginUserInfo=Object.assign([], this.$store.getters.userInfo)
     this.init();
   },
   methods: {
     //数据初始化
     init() {
-      getMaterialType().then((res) => {
-        this.materialOption = Object.assign([], res.data);
-      });
+       MaterialService.GetMaterialTypeList().then((res) => {
+       this.materialOption = Object.assign([], res.Data);
+        // this.materialTypeList.forEach((item, index) => {
+        //   item.icon = this.filterIncons[index];
+        // });
+       console.log('materialOption',this.materialOption)
+      })
+      // getMaterialType().then((res) => {
+      //   this.materialOption = Object.assign([], res.data);
+      // });
     },
 
     //提交数据
@@ -329,23 +339,24 @@ export default {
       this.$refs.ruleForm.validate((valid) => {
         if (valid) {
           const testQuery = {
-            name: this.ruleForm.material_name,
+            name: this.ruleForm.MaterialName,
             ...this.pages,
           };
+          this.submitSave();
           //先验证重复资源
-          getMaterialByName(testQuery).then((res) => {
-            if (res.code == 200) {
-              if (res.data.data.length > 0) {
-                this.pages.total = res.data.total;
-                this.pages.page = res.data.current_page;
-                this.materialData = Object.assign([], res.data.data);
-                this.dialogVisible = true;
-                this.showSubmitUtils = true;
-              } else {
-                this.submitSave();
-              }
-            }
-          });
+          // getMaterialByName(testQuery).then((res) => {
+          //   if (res.code == 200) {
+          //     if (res.data.data.length > 0) {
+          //       this.pages.Total = res.data.Total;
+          //       this.pages.Page = res.data.current_page;
+          //       this.materialData = Object.assign([], res.data.data);
+          //       this.dialogVisible = true;
+          //       this.showSubmitUtils = true;
+          //     } else {
+          //       this.submitSave();
+          //     }
+          //   }
+          // });
         } else {
           this.loading.submitLoading = false;
           return false;
@@ -355,69 +366,93 @@ export default {
 
     //确认提交数据
     submitSave() {
-      this.loading.submitLoading = true;
-      this.loading.saveLoading = true;
+      console.log
+      //this.loading.submitLoading = true;
+      //this.loading.saveLoading = true;
       const query = Object.assign({}, this.ruleForm);
       if (this.isAdd) {
-        addNewMaterialRecommend(query).then((res) => {
-          this.loading.submitLoading = false;
+        query.Status=0
+        query.UserId=this.LoginUserId
+        query.MaterialCoverid=0
+        console.log('query',query)
+        MaterialService.CreateMaterial(query).then(res=>{
+                    this.loading.submitLoading = false;
           this.loading.saveLoading = false;
           this.dialogVisible = false;
           this.loading.submitLoading = false;
-          if (res.code == 200) {
+          if (res.Code == 200) {
             this.$notify({
               title: "成功",
-              message: "您推荐的资源将在1-3个工作日内被管理人员审核",
+              message: "你的资源已重新分享！",
               type: "success",
             });
             this.$router.push({
               path: "/materialResult",
               query: {
-                id: res.data,
+                id: query.Id,
               },
             });
           }
-        });
+        })
       } else {
-        editMaterialRecommend(query).then((res) => {
-          this.loading.submitLoading = false;
+        MaterialService.UpdateMaterial(query).then(res=>{
+                    this.loading.submitLoading = false;
           this.loading.saveLoading = false;
           this.dialogVisible = false;
           this.loading.submitLoading = false;
-          if (res.code == 200) {
+          if (res.Code == 200) {
             this.$notify({
               title: "成功",
-              message: "你的资源已重新编辑，但是资源审核状态不会改变！",
+              message: "你的资源已重新编辑！",
               type: "success",
             });
             this.$router.push({
               path: "/materialResult",
               query: {
-                id: query.id,
+                id: query.Id,
               },
             });
           }
-        });
+        })
+        // editMaterialRecommend(query).then((res) => {
+        //   this.loading.submitLoading = false;
+        //   this.loading.saveLoading = false;
+        //   this.dialogVisible = false;
+        //   this.loading.submitLoading = false;
+        //   if (res.code == 200) {
+        //     this.$notify({
+        //       title: "成功",
+        //       message: "你的资源已重新编辑，但是资源审核状态不会改变！",
+        //       type: "success",
+        //     });
+        //     this.$router.push({
+        //       path: "/materialResult",
+        //       query: {
+        //         id: query.id,
+        //       },
+        //     });
+        //   }
+        // });
       }
     },
 
     //检测重复资源
     testRepeat() {
       this.loading.testLoading = true;
-      if (this.ruleForm.material_name == "") {
+      if (this.ruleForm.MaterialName == "") {
         this.$message({
           message: "请先输入资源名称！",
           type: "warning",
         });
         this.loading.testLoading = false;
       } else {
-        const query = { name: this.ruleForm.material_name, ...this.pages };
+        const query = { name: this.ruleForm.MaterialName, ...this.pages };
         getMaterialByName(query).then((res) => {
           this.loading.testLoading = false;
           if (res.code == 200) {
             if (res.data.data.length > 0) {
-              this.pages.total = res.data.total;
-              this.pages.page = res.data.current_page;
+              this.pages.Total = res.data.Total;
+              this.pages.Page = res.data.current_page;
               this.materialData = Object.assign([], res.data.data);
               this.dialogVisible = true;
             } else {
@@ -433,9 +468,9 @@ export default {
 
     //头像上传成后
     handleAvatarSuccess(response) {
-      if (response.code == 200) {
-        this.ruleForm.material_cover_id = response.data.id;
-        this.ruleForm.material_cover = response.data.img_path;
+      if (response.Code == 200) {
+        //this.ruleForm.MaterialCoverid = response.data.id;
+        this.ruleForm.MaterialCover = response.Data;
         this.$notify({
           title: "LOGO上传成功",
           message: "你的头像已经上传成功，记得点击保存按钮哦！",
@@ -473,12 +508,12 @@ export default {
 
     //分页变化
     currentChange(current) {
-      this.pages.page = current;
-      const query = { name: this.ruleForm.material_name, ...this.pages };
+      this.pages.Page = current;
+      const query = { name: this.ruleForm.MaterialName, ...this.pages };
       //重新请求赋值
       getMaterialByName(query).then((res) => {
-        this.pages.total = res.data.total;
-        this.pages.page = res.data.current_page;
+        this.pages.Total = res.data.Total;
+        this.pages.Page = res.data.current_page;
         this.materialData = Object.assign([], res.data.data);
       });
     },
@@ -486,13 +521,13 @@ export default {
   computed: {
     // 动态拼接上传路径
     action() {
-      return baseSetting.baseURL + baseSetting.uploadImgUrl;
+      return process.env.VUE_APP_API_URL + '/User/UPLoadPhoto';
     },
 
     // 设置请求头参数 token
     headers() {
       return {
-        Authorization: this.$store.getters.token,
+        Authorization:"Bearer "+ this.$store.getters.token,
       };
     },
   },

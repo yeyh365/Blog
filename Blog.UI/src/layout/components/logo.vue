@@ -22,7 +22,7 @@
         class="logo-title"
         @click="toHme"
       >
-        <h3>Yerik</h3>
+        <h3>源于未知</h3>
       </div>
     </div>
   </div>

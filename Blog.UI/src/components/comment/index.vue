@@ -33,7 +33,7 @@
                   :key="'oitem' + index"
                   @click="choseEmoji(0, oitem.title)"
                 >
-                  <img :src="require('./img/face/' + oitem.url)" alt="" />
+                  <!-- <img :src="require('./img/face/' + oitem.url)" alt="" /> -->
                 </li>
               </ul>
             </div>
@@ -90,13 +90,12 @@
               {{ label }}
             </div>
             <div class="date">
-              {{ item.Created }}
+              {{ $utils.formatDateTime(item.Created)}}
             </div>
           </div>
         </div>
 
         <div class="reply-content" v-html="analyzeEmoji(item.Content)">
-          {{ analyzeEmoji(item.Content) }}
         </div>
         <div class="reply-content reply-fa">
           <div class="reply-font" @click="doReply(item.Id)">
@@ -109,27 +108,27 @@
           <div
             class="comment"
             :style="{ width: commentWidth }"
-            v-if="replyMap[item.id]"
+            v-if="replyMap[item.Id]"
             :showAvatar="showAvatar"
           >
             <el-input
-              @focus="showButton(item.id)"
+              @focus="showButton(item.Id)"
               type="textarea"
               :autosize="{ minRows: minRows, maxRows: maxRows }"
               :placeholder="placeholder"
-              v-model="textareaMap[item.id]"
+              v-model="textareaMap[item.Id]"
               maxlength="200"
               show-word-limit
             >
             </el-input>
 
-            <div v-if="buttonMap[item.id]" class="hbl-owo flex-owo">
+            <div v-if="buttonMap[item.Id]" class="hbl-owo flex-owo">
               <div
-                :class="pBodyMap[item.id] ? 'OwO' : 'OwO OwO-open'"
+                :class="pBodyMap[item.Id] ? 'OwO' : 'OwO OwO-open'"
                 class="emoj publish"
                 :style="{ width: emojiWidth }"
               >
-                <div class="OwO-logo" @click="pBodyStatus(item.id)">
+                <div class="OwO-logo" @click="pBodyStatus(item.Id)">
                   <span>Emoji表情</span>
                 </div>
                 <div class="OwO-body">
@@ -138,7 +137,7 @@
                       class="OwO-item"
                       v-for="(oitem, index) in OwOlist"
                       :key="'oitem' + index"
-                      @click="choseEmoji(item.id, oitem.title)"
+                      @click="choseEmoji(item.Id, oitem.title)"
                     >
                       <img :src="require('./img/face/' + oitem.url)" alt="" />
                     </li>
@@ -150,13 +149,13 @@
                 <el-button
                   type="primary"
                   icon="el-icon-circle-check"
-                  @click="doChidSend(item.id, item.userInfo.id, item.id)"
+                  @click="doChidSend(item.Id, item.FromUserId.Id, item.Id)"
                   size="mini"
                   >评论</el-button
                 >
                 <el-button
                   type="info"
-                  @click="cancel(item.id)"
+                  @click="cancel(item.Id)"
                   icon="el-icon-circle-close"
                   size="mini"
                   >取消</el-button
@@ -189,25 +188,24 @@
                 {{ label }}
               </div>
               <div class="date">
-                {{ ritem.Created }}
+                {{ $utils.formatDateTime(ritem.Created) }}
               </div>
             </div>
           </div>
 
           <div class="reply-content">
             <div class="cc cc-to" @click="toUserInfo(ritem.ReplyUserInfo.Id)">
-              <a href="#" v-if="ritem.ReplyUserInfo.Name"
+              <!-- <a href="#" v-if="ritem.ReplyUserInfo.Name"
                 >@{{ ritem.ReplyUserInfo.Name }}</a
-              >
+              > -->
             </div>
 
             <div class="cc" v-html="analyzeEmoji(ritem.Content)">
-              {{ analyzeEmoji(ritem.content) }}
             </div>
           </div>
 
           <div class="reply-content reply-fa">
-            <div class="reply-font" @click="doReply(ritem.id)">
+            <div class="reply-font" @click="doReply(ritem.Id)">
               <div>
                 <img src="./img/icon/reply.png" class="icon-reply" />
                 <font class="icon-reply icon-hf">回复</font>
@@ -217,7 +215,7 @@
             <div
               class="comment"
               :style="{ width: commentWidth }"
-              v-if="replyMap[ritem.id]"
+              v-if="replyMap[ritem.Id]"
               :showAvatar="showAvatar"
             >
               <el-input
@@ -258,7 +256,7 @@
                   <el-button
                     type="primary"
                     icon="el-icon-circle-check"
-                    @click="doChidSend(ritem.Id, ritem.userInfo.Id, item.Id)"
+                    @click="doChidSend(ritem.Id, ritem.FromUserId.Id, item.Id)"
                     size="mini"
                     >评论</el-button
                   >
@@ -419,21 +417,46 @@ export default {
     blur() {
       alert("ss");
     },
+    //开启按钮
     showButton(index) {
       this.$set(this.buttonMap, index, true);
       this.pBodyStatus(0, 1);
     },
+    //开启编辑框
+    doReply(index) {
+      this.$set(this.replyMap, index, true);
+    },
+    //关闭编辑框
     cancel(index) {
       this.$set(this.buttonMap, index, false);
       if (index !== 0) {
         this.$set(this.replyMap, index, false);
       }
     },
-
+    cancelAll() {
+      for (let i = 0; i < this.buttonMap.length; i++) {
+        if(this.buttonMap[i]){
+          this.$set(this.buttonMap, i, false);
+         if (i !== 0) {
+           this.$set(this.replyMap, i, false);
+         }      
+      }}
+  
+    },
+    //开启评论框
+        pBodyStatus(index, status = 0) {
+      if (status == 1) {
+        this.$set(this.pBodyMap, index, true);
+      } else {
+        this.$set(this.pBodyMap, index, !this.pBodyMap[index]);
+      }
+    },
+    //发送品论
     doSend() {
       this.$emit("doSend", this.textareaMap[0]);
       this.$set(this.textareaMap, 0, "");
     },
+    //发送子评论
     doChidSend(index, commentUserId, pid) {
       this.$emit("doChidSend", this.textareaMap[index], commentUserId, pid);
       this.$set(this.textareaMap, index, "");
@@ -485,17 +508,8 @@ export default {
       // }
       return cont;
     },
-    doReply(index) {
-      this.$set(this.replyMap, index, true);
-    },
 
-    pBodyStatus(index, status = 0) {
-      if (status == 1) {
-        this.$set(this.pBodyMap, index, true);
-      } else {
-        this.$set(this.pBodyMap, index, !this.pBodyMap[index]);
-      }
-    },
+
   },
   watch: {
     // 如果路由有变化，会再次执行该方法

@@ -155,69 +155,69 @@
             var City = GetUserInfoByType("City");
             var County = GetUserInfoByType("County");
             List<int> Ids = new List<int>();
-            if (!string.IsNullOrEmpty(Post) && Post != "SuperAdmin")
-            {
+            //if (!string.IsNullOrEmpty(Post) && Post != "SuperAdmin")
+            //{
                 
-                if (Post == "ProvinceAdmin")
-                {
-                    var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
-                    if (ProvinceInfo != null)
-                    {
-                        Ids.Add(ProvinceInfo.Id);
-                        var CityList = DataList.Where(s => s.Name == "City" && s.ParentKey == ProvinceInfo.Key).ToList();
-                        if (CityList != null)
-                        {
-                            Ids.AddRange(CityList.Select(s => s.Id).ToList());
-                            var CountyList = DataList.Where(s => s.Name == "County" && CityList.Select(s => s.Key).ToList().Contains(s.ParentKey)).ToList();
-                            if (CountyList != null)
-                            {
-                                Ids.AddRange(CountyList.Select(s => s.Id).ToList());
-                            }
-                        }
-                    }
-                }
-                else if (Post == "CityAdmin")
-                {
-                    var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
-                    if (ProvinceInfo != null)
-                    {
-                        Ids.Add(ProvinceInfo.Id);
-                        var CityInfo = DataList.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault();
-                        if (CityInfo != null)
-                        {
-                            Ids.Add(CityInfo.Id);
-                            var CountyList = DataList.Where(s => s.Name == "County" && s.ParentKey == CityInfo.Key).ToList();
-                            if (CountyList != null)
-                            {
-                                Ids.AddRange(CountyList.Select(s => s.Id).ToList());
-                            }
-                        }
-                    }
-                }
-                else if (Post == "CountyAdmin" || Post == "CountyUser")
-                {
-                    var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
-                    if (ProvinceInfo != null)
-                    {
-                        Ids.Add(ProvinceInfo.Id);
-                        var CityInfo = DataList.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault();
-                        if (CityInfo != null)
-                        {
-                            Ids.Add(CityInfo.Id);
-                            var CountyInfo = DataList.Where(s => s.Name == "County" && s.Value == County).FirstOrDefault();
-                            if (CountyInfo != null)
-                            {
-                                Ids.Add(CountyInfo.Id);
-                            }
-                        }
-                    }
-                }
-                DataList = DataList.Where(s => Ids.Contains(s.Id)).ToList();
-            }
-            else
-            {
-                Ids = DataList.Select(s => s.Id).ToList();
-            }
+            //    if (Post == "ProvinceAdmin")
+            //    {
+            //        var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
+            //        if (ProvinceInfo != null)
+            //        {
+            //            Ids.Add(ProvinceInfo.Id);
+            //            var CityList = DataList.Where(s => s.Name == "City" && s.ParentKey == ProvinceInfo.Key).ToList();
+            //            if (CityList != null)
+            //            {
+            //                Ids.AddRange(CityList.Select(s => s.Id).ToList());
+            //                var CountyList = DataList.Where(s => s.Name == "County" && CityList.Select(s => s.Key).ToList().Contains(s.ParentKey)).ToList();
+            //                if (CountyList != null)
+            //                {
+            //                    Ids.AddRange(CountyList.Select(s => s.Id).ToList());
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else if (Post == "CityAdmin")
+            //    {
+            //        var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
+            //        if (ProvinceInfo != null)
+            //        {
+            //            Ids.Add(ProvinceInfo.Id);
+            //            var CityInfo = DataList.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault();
+            //            if (CityInfo != null)
+            //            {
+            //                Ids.Add(CityInfo.Id);
+            //                var CountyList = DataList.Where(s => s.Name == "County" && s.ParentKey == CityInfo.Key).ToList();
+            //                if (CountyList != null)
+            //                {
+            //                    Ids.AddRange(CountyList.Select(s => s.Id).ToList());
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else if (Post == "CountyAdmin" || Post == "CountyUser")
+            //    {
+            //        var ProvinceInfo = DataList.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault();
+            //        if (ProvinceInfo != null)
+            //        {
+            //            Ids.Add(ProvinceInfo.Id);
+            //            var CityInfo = DataList.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault();
+            //            if (CityInfo != null)
+            //            {
+            //                Ids.Add(CityInfo.Id);
+            //                var CountyInfo = DataList.Where(s => s.Name == "County" && s.Value == County).FirstOrDefault();
+            //                if (CountyInfo != null)
+            //                {
+            //                    Ids.Add(CountyInfo.Id);
+            //                }
+            //            }
+            //        }
+            //    }
+            //    DataList = DataList.Where(s => Ids.Contains(s.Id)).ToList();
+            //}
+            //else
+            //{
+            //    Ids = DataList.Select(s => s.Id).ToList();
+            //}
 
             return Ids;
         }

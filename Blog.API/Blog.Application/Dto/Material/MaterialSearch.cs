@@ -31,5 +31,6 @@ namespace Blog.Application.Dto
         /// </summary>
         public string? keywords { get; set; }
         public string? sort { get; set; }
+        public int? AuditStatus { get; set; }
     }
 }

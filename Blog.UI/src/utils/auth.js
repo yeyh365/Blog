@@ -7,7 +7,7 @@
  */
 import Cookies from 'js-cookie'
 
-const TokenKey = 'BLOG-TOKEN'
+const TokenKey = 'YE-TOKEN'
 
 //获取token
 export function getToken() {

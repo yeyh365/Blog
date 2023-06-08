@@ -66,28 +66,28 @@
             >
               <div class='item-img'>
                 <div><img
-                    :src="$utils.imgUrl(item.img_url)"
+                    :src="$utils.imgUrl(item.Remark1)"
                     alt=""
                   ></div>
               </div>
               <div class='item-title'>
-                <h4>{{item.achievements_name}}</h4>
+                <h4>{{item.Key}}</h4>
               </div>
               <div class='item-user'>
                 <div>推荐人：</div>
                 <div class='user-info'>
-                  <div class='user-avatar'><img
-                      :src="$utils.imgUrl(item.userInfo.avatar_url)"
-                      alt="avatar"
-                      style="width:100%;height:100px"
-                    ></div>
+                  <div class='user-avatar'>              <el-avatar
+                size="medium"
+                :src="$utils.imgUrl(item.User.Photo)"
+              ></el-avatar>
+              </div>
                   <div>
-                    <span>{{item.userInfo.nickname}}</span>
+                    <span>{{item.User.Name}}</span>
                   </div>
                 </div>
               </div>
               <div class="item-describe">
-                <p>{{item.describe}}</p>
+                <p>{{item.Remark}}</p>
               </div>
             </div>
           </el-card>
@@ -100,6 +100,7 @@
 
 <script>
 import { getAchievementsList } from "@/api/achievements/index";
+import DictDataService from"@/api/services/DictDataService"
 import { getToken } from "@/utils/auth";
 export default {
   name: "Achievements",
@@ -123,14 +124,20 @@ export default {
   },
   methods: {
     init() {
-      getAchievementsList().then((res) => {
-        this.achievementsList = Object.assign([], res.data);
-      });
+      const project ='Project'
+      DictDataService.dictProjectData(project).then(res=>{
+        this.achievementsList = Object.assign([], res.Data);
+        console.log('111',this.achievementsList)
+      })
+      // getAchievementsList().then((res) => {
+      //   this.achievementsList = Object.assign([], res.data);
+      // });
     },
 
     //打开网页
     openAchievements(item) {
-      window.open(item.achievements_url + "?token=" + getToken());
+      console.log('item',item)
+      window.open(item.Value);
     },
 
     //显示tips

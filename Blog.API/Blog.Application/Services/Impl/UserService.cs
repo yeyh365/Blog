@@ -24,6 +24,7 @@ using NPOI.POIFS.Properties;
 using Blog.EntityFrameworkCore.Redis;
 using NPOI.SS.Formula.Functions;
 using System.Text.RegularExpressions;
+using NPOI.SS.Formula.Eval;
 
 namespace Blog.Application.Services.Impl
 {
@@ -35,6 +36,10 @@ namespace Blog.Application.Services.Impl
         #region init
         private readonly IRepository<User> _UserRepository;
         private readonly IRepository<Dictionary> _DictionaryRepository;
+        private readonly IRepository<Interaction> _InteractionRepository;
+        private readonly IRepository<Article> _ArticleRepository;
+        private readonly IRepository<Material> _MaterialRepository;
+
         /// <summary>
         /// UserService
         /// </summary>
@@ -48,6 +53,10 @@ namespace Blog.Application.Services.Impl
         {
             this._UserRepository = this._repositoryProvider.Create<User>(this._context);
             this._DictionaryRepository = this._repositoryProvider.Create<Dictionary>(this._context);
+            this._InteractionRepository = this._repositoryProvider.Create<Interaction>(this._context);
+            this._ArticleRepository = this._repositoryProvider.Create<Article>(this._context);
+            this._MaterialRepository = this._repositoryProvider.Create<Material>(this._context);
+
         }
         #endregion
         #region Public
@@ -73,34 +82,34 @@ namespace Blog.Application.Services.Impl
                 Query = Query.Where(t => t.Post.Contains(Search.Post));
             }
             
-            if (!string.IsNullOrEmpty(Post))
-            {
-                List<string> ListName = new List<string>
-                {
-                    "Province",
-                    "City",
-                    "County"
-                };
-                var List = _DictionaryRepository.Get(s => ListName.Contains(s.Name)).ToList();
-                if (Post== "ProvinceAdmin")
-                {
-                    var ParentID = List.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault().Key;
-                    var CityList = List.Where(s => s.Name == "City" && s.ParentKey == ParentID).Select(s => s.Value).ToList();
-                    var CityKeyList = List.Where(s => s.Name == "City" && s.ParentKey == ParentID).Select(s => s.Key).ToList();
-                    var CountyList = List.Where(s => s.Name == "County" && CityKeyList.Contains(s.ParentKey)).Select(s => s.Value).ToList();
-                    Query = Query.Where(t => t.Account== Account || (t.Post== "CityAdmin" && CityList.Contains(t.City)) || (t.Post == "CountyAdmin" && CountyList.Contains(t.County)) || (t.Post == "CountyUser" && CountyList.Contains(t.County)));
-                }
-                else if (Post == "CityAdmin")
-                {
-                    var ParentID = List.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault().Key;
-                    var CountyList = List.Where(s => s.Name == "County" && s.ParentKey== ParentID).Select(s => s.Value).ToList();
-                    Query = Query.Where(t => t.Account == Account || (t.Post == "CountyAdmin" && CountyList.Contains(t.County)) || (t.Post == "CountyUser" && CountyList.Contains(t.County)));
-                }
-                else if (Post == "CountyAdmin")
-                {
-                    Query = Query.Where(t => t.Account == Account || (t.Post == "CountyUser" && t.County== County));
-                }
-            }
+            //if (!string.IsNullOrEmpty(Post))
+            //{
+            //    List<string> ListName = new List<string>
+            //    {
+            //        "Province",
+            //        "City",
+            //        "County"
+            //    };
+            //    var List = _DictionaryRepository.Get(s => ListName.Contains(s.Name)).ToList();
+            //    if (Post== "ProvinceAdmin")
+            //    {
+            //        var ParentID = List.Where(s => s.Name == "Province" && s.Value == Province).FirstOrDefault().Key;
+            //        var CityList = List.Where(s => s.Name == "City" && s.ParentKey == ParentID).Select(s => s.Value).ToList();
+            //        var CityKeyList = List.Where(s => s.Name == "City" && s.ParentKey == ParentID).Select(s => s.Key).ToList();
+            //        var CountyList = List.Where(s => s.Name == "County" && CityKeyList.Contains(s.ParentKey)).Select(s => s.Value).ToList();
+            //        Query = Query.Where(t => t.Account== Account || (t.Post== "CityAdmin" && CityList.Contains(t.City)) || (t.Post == "CountyAdmin" && CountyList.Contains(t.County)) || (t.Post == "CountyUser" && CountyList.Contains(t.County)));
+            //    }
+            //    else if (Post == "CityAdmin")
+            //    {
+            //        var ParentID = List.Where(s => s.Name == "City" && s.Value == City).FirstOrDefault().Key;
+            //        var CountyList = List.Where(s => s.Name == "County" && s.ParentKey== ParentID).Select(s => s.Value).ToList();
+            //        Query = Query.Where(t => t.Account == Account || (t.Post == "CountyAdmin" && CountyList.Contains(t.County)) || (t.Post == "CountyUser" && CountyList.Contains(t.County)));
+            //    }
+            //    else if (Post == "CountyAdmin")
+            //    {
+            //        Query = Query.Where(t => t.Account == Account || (t.Post == "CountyUser" && t.County== County));
+            //    }
+            //}
 
             return Query;
         }
@@ -219,7 +228,7 @@ namespace Blog.Application.Services.Impl
                 {
                     if(!string.IsNullOrEmpty(DataModel.PassWord))
                     {
-                        DataModel.PassWord = MD5Helper.Md5Method(DataModel.PassWord);
+                       DataModel.PassWord = DataModel.PassWord;
                     }
                     else
                     {
@@ -367,9 +376,9 @@ namespace Blog.Application.Services.Impl
         {
             var result = new ResultModel();
 
-            string Account = GetUserInfoByType("Account");
+            string Email = GetUserInfoByType("Email");
 
-            var DataModel = await _UserRepository.Get(x => x.Account == Account).FirstOrDefaultAsync(cancellationToken);
+            var DataModel = await _UserRepository.Get(x => x.Email == Email).FirstOrDefaultAsync(cancellationToken);
             if (DataModel == null)
             {
                 result.Code = ResultCode.NotFound;
@@ -377,21 +386,80 @@ namespace Blog.Application.Services.Impl
                 return result;
             }
             UserDto DataInfo = _mapper.Map<User, UserDto>(DataModel);
-            try
-            {
-                List<string> TypeList = "Province;City;County".Split(';').ToList();
-                //权限控制
-                var DataList = _DictionaryRepository.Get(x => TypeList.Contains(x.Name)).ToList();
-                List<int> Ids = GetDictionaryIds(DataList);
-                DataList = DataList.Where(s => Ids.Contains(s.Id)).ToList();
-                var ResultList = _mapper.Map<List<Dictionary>, List<DictionaryDto>>(DataList);
-                DataInfo.DicList = ResultList;
-            }
-            catch (Exception ex) { }
+            //List<string> TypeList = "Province;City;County".Split(';').ToList();
+            ////权限控制
+            //var DataList = _DictionaryRepository.Get(x => TypeList.Contains(x.Name)).ToList();
+            //List<int> Ids = GetDictionaryIds(DataList);
+            //DataList = DataList.Where(s => Ids.Contains(s.Id)).ToList();
+            //var ResultList = _mapper.Map<List<Dictionary>, List<DictionaryDto>>(DataList);
+            //DataInfo.DicList = ResultList;
+            InteractionDtoNum    interactionDtoNum   = new InteractionDtoNum();
+            interactionDtoNum.CollectionNum = _InteractionRepository.Get(x => x.UserId == DataInfo.Id && x.TypeName == "Collection" && x.Status == true).Count();
+            interactionDtoNum.FansNum = await _InteractionRepository.Get(x => x.AttentionUserId == DataInfo.Id && x.TypeName == "Follow" && x.Status == true).CountAsync(cancellationToken);
+            interactionDtoNum.FollowNum =  _InteractionRepository.Get(x => x.UserId == DataInfo.Id && x.TypeName == "Follow" && x.Status == true).Count();
+            interactionDtoNum.ArticleNum =  _ArticleRepository.Get(x => x.UserId == DataInfo.Id).Count();
+            interactionDtoNum.MaterialNum =  _MaterialRepository.Get(x => x.UserId == DataInfo.Id).Count();
+
+            //DataInfo.Interaction.CollectionNum= await _InteractionRepository.Get(x => x.UserId == DataInfo.Id&&x.TypeName== "Collection" && x.Status == true).CountAsync(cancellationToken);
+            //DataInfo.Interaction.FansNum = await _InteractionRepository.Get(x => x.AttentionUserId == DataInfo.Id && x.TypeName == "Follow" && x.Status == true).CountAsync(cancellationToken);
+            //DataInfo.Interaction.FollowNum = await _InteractionRepository.Get(x => x.UserId == DataInfo.Id && x.TypeName == "Follow" && x.Status == true).CountAsync(cancellationToken);
+            //DataInfo.Interaction.ArticleNum = await _ArticleRepository.Get(x => x.UserId == DataInfo.Id).CountAsync(cancellationToken);
+            //DataInfo.Interaction.MaterialNum = await _MaterialRepository.Get(x => x.UserId == DataInfo.Id ).CountAsync(cancellationToken);
+            DataInfo.InteractionNum = interactionDtoNum;
+
+
             result.Data = DataInfo;
-            
 
             return result;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<ResultModel> UpLoadPhoto(IFormFileCollection files, string webRootPath, CancellationToken cancellationToken)
+        {
+            var result = new ResultModel();
+            string path = string.Empty;
+            if (files == null || files.Count() <= 0) { result.Message = "请选择上传的文件。"; return result; }
+            //格式限制
+            var allowType = new string[] { "image/jpg", "image/png", "image/jpeg" };
+            if (files.Any(c => allowType.Contains(c.ContentType)))
+            {
+                if (files.Sum(c => c.Length) <= 1024 * 1024 * 4)
+                {
+                    foreach (var file in files)
+                    {
+                        string FileName = Path.GetFileName(file.FileName);
+                        string FileExt = Path.GetExtension(file.FileName);
+
+                        string saveTempPath = "wwwroot\\UploadFiles\\Photos\\";
+                        DirectoryInfo di = new DirectoryInfo(saveTempPath);
+                        if (!di.Exists) { di.Create(); }
+
+                        string strpath = Path.Combine(saveTempPath, DateTime.Now.ToString("yyMMddHHmmss") + "_" + Guid.NewGuid().ToString()) + FileExt;
+                        result.Data = strpath.Substring(8);
+                        path = Path.Combine(webRootPath, strpath);
+                        using (var stream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+                    }
+                    result.Message = "上传成功";
+                    return result;
+                }
+                else
+                {
+                    result.Message = "图片过大";
+                    return result;
+                }
+            }
+            else
+
+            {
+                result.Message = "图片格式错误";
+                return result;
+            }
         }
         public void SendEmail(string TO,int Code)
         {

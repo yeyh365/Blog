@@ -298,8 +298,10 @@ export default {
   },
 
   mounted() {
-    this.initWebSocket();
+
+    //this.initWebSocket();
     if (this.socketInfo.length > 0) {
+          alert(111)
       this.$refs.infoIcon.classList.add("info-btn");
     }
   },
@@ -317,12 +319,12 @@ export default {
       this.menuList = defaultSettings.menuList;
 
       // 判断登录信息
-      if (this.userInfo && this.userInfo.user.avatar_url != undefined) {
+      if (this.userInfo && this.userInfo.Photo != undefined) {
         this.havaUserInfo = true;
-        this.userNickname = this.userInfo.user.nickname;
-        this.userInfoAvatar = this.userInfo.user.avatar_url;
+        this.userNickname = this.userInfo.Name;
+        this.userInfoAvatar = this.userInfo.Photo;
         this.isHaveInfo = true;
-        this.otherInfo = Object.assign({}, this.userInfo.other);
+        this.otherInfo = Object.assign({}, this.userInfo.InteractionNum);
       } else {
         this.isHaveInfo = false;
       }
@@ -448,7 +450,7 @@ export default {
     //点击退出登录
     toLogOut() {
       //从vuex获取用户名
-      const userName = this.$store.getters.userInfo.user.nickname;
+      const userName = this.$store.getters.userInfo.Name;
       const alertTitle = `你好！${userName}`;
       const alertContainer = `<i style='color:red'>你确定要退出当前登陆吗？</i>`;
       this.$dialog
@@ -487,10 +489,10 @@ export default {
       if (newVal) {
         this.isNetImg = false;
         this.havaUserInfo = true;
-        this.userNickname = newVal.user.nickname;
-        this.userInfoAvatar = newVal.user.avatar_url;
+        this.userNickname = newVal.Name;
+        this.userInfoAvatar = newVal.Photo;
         this.isHaveInfo = true;
-        this.otherInfo = Object.assign({}, this.userInfo.other);
+        this.otherInfo = Object.assign({}, this.userInfo.InteractionNum);
       } else {
         this.isNetImg = true;
         this.havaUserInfo = false;

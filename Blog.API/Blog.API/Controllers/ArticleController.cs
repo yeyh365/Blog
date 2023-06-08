@@ -163,6 +163,34 @@ namespace Blog.WebAPI.Controllers
             #endregion
             return await _ArticleService.UpdateInteraction(Dto, cancellationToken);
         }
+        /// <summary>
+        /// 增加文章评论
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpPost, Route("CreateArticleComment")]
+        public async Task<ResultModel> CreateArticleComment(CommentItem Dto, CancellationToken cancellationToken)
+        {
+            #region Log日志
+            _LogService.CreateLog(_httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString(), "增加文章评论");
+            #endregion
+            return await _ArticleService.CreateArticleComment(Dto, cancellationToken);
+        }
+        /// <summary>
+        /// 增加文章子级评论
+        /// </summary>
+        /// <param name="Dto"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpPost, Route("CreateChildComment")]
+        public async Task<ResultModel> CreateChildComment(CommentItem Dto, CancellationToken cancellationToken)
+        {
+            #region Log日志
+            _LogService.CreateLog(_httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString(), "增加文章子级评论");
+            #endregion
+            return await _ArticleService.CreateChildComment(Dto, cancellationToken);
+        }
         #endregion
     }
 }

@@ -50,6 +50,17 @@ namespace Blog.WebAPI.Controllers
         {
             return await _DictionaryService.GetDictionaryList(Type, cancellationToken);
         }
+        /// <summary>
+        /// 获取项目详情(Type,支持多类型传输)
+        /// </summary>
+        /// <param name="Type">类型</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet, Route("GetProjectDictionaryByType")]
+        public async Task<ResultModel> GetProjectDictionaryByType(string Type, CancellationToken cancellationToken)
+        {
+            return await _DictionaryService.GetProjectDictionaryByType(Type, cancellationToken);
+        }
         #endregion
     }
 }

@@ -71,6 +71,7 @@ namespace Blog.Application.Services
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         Task<ResultModel> GetDictionaryList(string Type, CancellationToken cancellationToken);
+        Task<ResultModel> GetProjectDictionaryByType(string type, CancellationToken cancellationToken);
         #endregion
     }
 }

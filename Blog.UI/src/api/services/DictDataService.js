@@ -16,6 +16,17 @@ export default {
         })
     })
   },
+  dictProjectData(Type) {
+    return new Promise((resolve, reject) => {
+      axiosInstance.get(`/Dictionary/GetProjectDictionaryByType`, { params: { Type: Type }})
+        .then(response => {
+          resolve(response.data)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
   dictDataByKey(Type, Key) {
     return new Promise((resolve, reject) => {
       axiosInstance.get(`/Dictionary/GetDictionaryList`, { params: { Type: Type, Key: Key }})

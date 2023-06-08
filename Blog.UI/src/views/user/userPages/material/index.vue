@@ -12,34 +12,33 @@
       <div class='material-status'>
         <el-button-group class="button-group">
           <el-button
-            :type="filterForm.status==1?'primary':''"
+            :type="filterForm.AuditStatus==0?'primary':''"
             size="small"
-            @click="changeMaterialStatus(1)"
+            @click="changeMaterialStatus(0)"
             :disabled='!isSelf'
           ><i class='el-icon-remove-outline'></i> 待审核</el-button>
           <el-button
-            :type="filterForm.status==2?'success':''"
+            :type="filterForm.AuditStatus==1?'success':''"
             size="small"
-            @click="changeMaterialStatus(2)"
+            @click="changeMaterialStatus(1)"
           ><i class='el-icon-circle-check'></i> 已审核</el-button>
           <el-button
-            type=""
             size="small"
-            :type="filterForm.status==4?'warning':''"
-            @click="changeMaterialStatus(4)"
+            :type="filterForm.AuditStatus==2?'warning':''"
+            @click="changeMaterialStatus(2)"
             :disabled='!isSelf'
           ><i class='el-icon-circle-close'></i> 未通过</el-button>
           <el-button
-            :type="filterForm.status==3?'danger':''"
+            :type="filterForm.AuditStatus==3?'danger':''"
             size="small"
             @click="changeMaterialStatus(3)"
             :disabled='!isSelf'
           ><i class='el-icon-warning-outline'></i> 下架</el-button>
           <el-button
             size="small"
-            @click="changeMaterialStatus(5)"
+            @click="changeMaterialStatus(4)"
             :disabled='!isSelf'
-            :class='{"isCollection":filterForm.status==5}'
+            :class='{"isCollection":filterForm.AuditStatus==4}'
           ><i class='el-icon-star-off'></i> 收藏</el-button>
         </el-button-group>
 
@@ -77,12 +76,12 @@
                 size="mini"
                 style="margin-right:5px"
                 @click="editMaterial(item)"
-                v-if='filterForm.status!=5'
+                v-if='filterForm.AuditStatus!=4'
               ></el-button>
               <el-popconfirm
                 title="你确定要删除这项推荐资源吗？"
                 @confirm='deletMaterial(item)'
-                v-if='filterForm.status!=5'
+                v-if='filterForm.AuditStatus!=4'
               >
                 <el-button
                   type="danger"
@@ -147,9 +146,9 @@
         <el-pagination
           background
           layout="prev, pager, next"
-          :total="filterForm.total"
-          :page-size='filterForm.list_rows'
-          :current-page='filterForm.page'
+          :Total="filterForm.Total"
+          :Page-size='filterForm.Limit'
+          :current-Page='filterForm.Page'
           @current-change='currentChange'
           small
         >
@@ -168,6 +167,7 @@ import {
   deleteUserCollectionMaterial,
 } from "@/api/material/materialRecommend";
 import MaertrialItem from "@/components/materialItem/index.vue";
+import MaterialService from '@/api/services/MaterialService'
 export default {
   name: "Material",
   components: {
@@ -177,10 +177,10 @@ export default {
     return {
       //过滤表单
       filterForm: {
-        status: 2,
-        list_rows: 8,
-        page: 1,
-        total: 0,
+        AuditStatus: 1,
+        Limit: 8,
+        Page: 1,
+        Total: 0,
       },
 
       //资源列表
@@ -220,32 +220,44 @@ export default {
       }
 
       let query = Object.assign({}, this.filterForm);
-      query.total = 0;
+      query.Total = 0;
 
-      query.userId = this.userId;
-
+      query.userId = this.userId *1;
       let data = null;
-      //收藏数据
-      if (query.status == 5) {
-        data = await getUserCollectionMaterial(query);
-      } else {
-        data = await getUserMaterialByStatus(query);
-      }
-
+      console.log(query)
+      MaterialService.GetMaterialList(query).then((res) => {
+      this.loading = false;
       if (type) {
-        this.materialList = Object.assign([], data.data.data);
+        this.materialList = Object.assign([], res.Data);
       } else {
-        this.materialList = this.materialList.concat(data.data.data);
+        this.materialList = this.materialList.concat(res.Data);
 
         // 控制获取更改按钮显示
 
         this.loading = false;
       }
-      this.filterForm.total = data.data.total;
+      })
+      //收藏数据
+      // if (query.status == 5) {
+      //   data = await getUserCollectionMaterial(query);
+      // } else {
+      //   data = await getUserMaterialByStatus(query);
+      // }
+   
+      // if (type) {
+      //   this.materialList = Object.assign([], data.data.data);
+      // } else {
+      //   this.materialList = this.materialList.concat(data.data.data);
+
+      //   // 控制获取更改按钮显示
+
+      //   this.loading = false;
+      // }
+      //this.filterForm.Total = res.Total;
 
       if (
-        this.filterForm.total <
-        this.filterForm.list_rows * this.filterForm.page
+        this.filterForm.Total <
+        this.filterForm.Limit * this.filterForm.Page
       ) {
         this.showGetMoreBtn = false;
       } else {
@@ -255,10 +267,10 @@ export default {
 
     //切换资源状态
     changeMaterialStatus(status) {
-      this.filterForm.status = status;
-      this.filterForm.list_rows = 8;
-      this.filterForm.page = 1;
-      this.filterForm.total = 0;
+      this.filterForm.AuditStatus = status;
+      this.filterForm.Limit = 8;
+      this.filterForm.Page = 1;
+      this.filterForm.Total = 0;
       this.init();
     },
 
@@ -290,10 +302,11 @@ export default {
 
     //编辑资源
     editMaterial(item) {
+      console.log(item)
       //label重组
-      item.label = [];
-      item.typeId.forEach((value) => {
-        item.label.push(value.type_id);
+      item.Label = [];
+      item.Keywords.forEach((value) => {
+        item.Label.push(value.Id);
       });
 
       //改变下架的和未通过的状态
@@ -302,9 +315,9 @@ export default {
       }
 
       //移除不需要的元素
-      delete item.update_time;
-      delete item.create_time;
-      delete item.typeId;
+      //delete item.update_time;
+      delete item.Created;
+      delete item.Keywords;
 
       //跳转页面
       this.$router.push({
@@ -317,15 +330,15 @@ export default {
     },
 
     //分页切换
-    currentChange(page) {
-      this.filterForm.page = page;
+    currentChange(Page) {
+      this.filterForm.Page = Page;
       this.init();
     },
 
     // 获取更多
     getMore() {
       this.loading = true;
-      this.filterForm.page++;
+      this.filterForm.Page++;
       this.init(false);
     },
   },
@@ -335,9 +348,9 @@ export default {
   watch: {
     visitorId(value) {
       if (value == this.$store.getters.userId) {
-        this.filterForm.status = 2;
+        this.filterForm.AuditStatus = 2;
       } else {
-        this.filterForm.status = 5;
+        this.filterForm.AuditStatus = 5;
       }
       this.init();
     },

@@ -16,7 +16,7 @@
       <div class="article-title">
         <input
           type="text"
-          v-model="articleForm.article_title"
+          v-model="articleForm.ArticleTitle"
           @mouseover="mouseover"
           @mouseleave="mouseleave"
           placeholder="请输入文章标题"
@@ -35,7 +35,7 @@
       >
         <MavonEditor
           ref="md"
-          v-model="articleForm.article_content"
+          v-model="articleForm.ArticleContent"
           :subfield="false"
           :scrollStyle="true"
           placeholder="开始编辑吧！（可以直接拖入md文件或者txt文件解析哦！）"
@@ -54,24 +54,24 @@
               style="margin:0"
             >
               <el-select
-                v-model="articleForm.article_classification"
+                v-model="articleForm.ArticleClassification"
                 :size="$utils.isMobile()?'medium' :'mini'"
                 style="width: 100%;"
                 clearable
                 placeholder="请选择当前文章的类型"
               >
                 <el-option
-                  v-for="(item,key) in classificationOptions"
+                  v-for="(item,key) in classificationOptions.Keywords"
                   :key="key"
-                  :label="item.classification_name"
-                  :value="item.id"
+                  :label="item.TypeName"
+                  :value="item.Id"
                 >
                 </el-option>
               </el-select>
             </el-form-item>
             <el-form-item label="文章专题">
               <el-select
-                v-model="articleForm.article_special"
+                v-model="articleForm.ArticleSpecial"
                 :size="$utils.isMobile()?'medium' :'mini'"
                 style="width: 100%"
                 multiple
@@ -81,17 +81,17 @@
               >
 
                 <el-option
-                  v-for="(item,index) in specialOptions"
+                  v-for="(item,index) in specialOptions.Keywords"
                   :key="index"
-                  :label="item.special_name"
-                  :value="item.id"
+                  :label="item.TypeName"
+                  :value="item.Id"
                 >
                 </el-option>
               </el-select>
             </el-form-item>
             <el-form-item label="文章标签">
               <el-select
-                v-model="articleForm.article_label"
+                v-model="articleForm.ArticleLabel"
                 :size="$utils.isMobile()?'medium' :'mini'"
                 style="width: 100%"
                 multiple
@@ -100,10 +100,10 @@
                 :multiple-limit='5'
               >
                 <el-option
-                  v-for="(item,index) in labelOptions"
+                  v-for="(item,index) in labelOptions.Keywords"
                   :key="index"
-                  :label="item.label_name"
-                  :value="item.id"
+                  :label="item.TypeName"
+                  :value="item.Id"
                 >
                 </el-option>
               </el-select>
@@ -124,14 +124,14 @@
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
               >
-                <div v-if="articleForm.cover_img_url == ''">
+                <div v-if="articleForm.CoverImgUrl == ''">
                   <i class="el-icon-upload"></i>
                   <div class="el-upload__text">
                     将图片拖到此处，或<em>点击上传</em>
                   </div>
                 </div>
                 <div v-else>
-                  <el-image :src="$utils.imgUrl(articleForm.cover_img_url)"></el-image>
+                  <el-image :src="$utils.imgUrl(articleForm.CoverImgUrl)"></el-image>
                 </div>
 
                 <div
@@ -180,6 +180,7 @@ import baseSetting from "@/config/defaultSettings"; // 引入全局基本配置
 import { isEmptyObject } from "@/utils/validate"; //引入工具函数
 
 import defaultSettings from "@/config/defaultSettings.js";
+import ArticleService from"@/api/services/ArticleService"
 import {
   getArticleReleaseOption,
   blogUserReleaseContent,
@@ -194,13 +195,13 @@ export default {
     return {
       //表单数据
       articleForm: {
-        article_title: "", //文章标题
-        article_content: "", //文章主体内容
-        article_classification: "", //文章分类ID
-        article_special: [], //文章专题ID
-        article_label: [], //文章标签ID
-        cover_img_id: "", //封面ID
-        cover_img_url: "", //封面路
+        ArticleTitle: "", //文章标题
+        ArticleContent: "", //文章主体内容
+        ArticleClassification: "", //文章分类ID
+        ArticleSpecial: [], //文章专题ID
+        ArticleLabel: [], //文章标签ID
+        CoverImgId: "", //封面ID
+        CoverImgUrl: "", //封面路
       },
 
       //loading动画
@@ -237,13 +238,17 @@ export default {
 
   methods: {
     init() {
-
+           ArticleService.GetArticleTypeList().then(res=>{
+        this.classificationOptions = res.Data[0];
+         this.specialOptions = res.Data[1];
+         this.labelOptions = res.Data[2];
+           })
       //初始化文章选项数据
-      getArticleReleaseOption().then((res) => {
-        this.classificationOptions = res.data.classification;
-        this.specialOptions = res.data.special;
-        this.labelOptions = res.data.label;
-      });
+      // getArticleReleaseOption().then((res) => {
+      //   this.classificationOptions = res.data.classification;
+      //   this.specialOptions = res.data.special;
+      //   this.labelOptions = res.data.label;
+      // });
     },
 
     /**
@@ -255,8 +260,8 @@ export default {
       };
       getEditArticle(query).then((res) => {
         this.articleForm = Object.assign({}, res.data);
-        if (this.articleForm.article_classification == 0) {
-          this.articleForm.article_classification = undefined;
+        if (this.articleForm.ArticleClassification == 0) {
+          this.articleForm.ArticleClassification = undefined;
         }
       });
     },
@@ -265,16 +270,16 @@ export default {
      *提交文章数据
      */
     async saveData() {
-      if (this.articleForm.article_title == "") {
+      if (this.articleForm.ArticleTitle == "") {
         this.$message.error("你不会忘记了文章标题吧！");
         return;
-      } else if (this.articleForm.article_content == "") {
+      } else if (this.articleForm.ArticleContent == "") {
         this.$message.error("文章内容不能为空呀！");
         return;
-      } else if (this.articleForm.article_classification == "") {
+      } else if (this.articleForm.ArticleClassification == "") {
         this.$message.error("记得选择文章分类哦！");
         return;
-      } else if (this.articleForm.cover_img_url == "") {
+      } else if (this.articleForm.CoverImgUrl == "") {
         this.$message.error("记得上传文章封面哦！");
         return;
       }
@@ -282,34 +287,53 @@ export default {
       //设置延迟时间
       await this.$refs.md.uploadMdImgs();
       this.$refs.md.save();
-      const data = Object.assign({}, this.articleForm);
-      data.status = 0;
-      data.is_appeal = 0;
-      blogUserReleaseContent(data).then((res) => {
-        if (res) {
-          this.articleForm.article_title = "";
-          this.articleForm.article_content = "";
-          this.articleForm.article_classification = "";
-          this.articleForm.article_label = "";
-          this.articleForm.article_special = "";
+            const data = Object.assign({}, this.articleForm);
+      data.Status = 0;
+      data.IsAppeal = 0;
+             ArticleService.CreateArticle(data).then(res=>{
+                if (res) {
+          this.articleForm.ArticleTitle = "";
+          this.articleForm.ArticleContent = "";
+          this.articleForm.ArticleClassification = "";
+          this.articleForm.ArticleLabel = "";
+          this.articleForm.ArticleSpecial = "";
           const USERID = this.$store.getters.userId;
           this.$store.commit("SET_VISITOR_ID", USERID);
           const VISITORID = this.$store.getters.visitorId;
           this.$router.push(`/userInfo/${VISITORID}/releaseList`);
           this.$notify({
             title: "成功",
-            message: "你的文章已提交至后台管理员审核，请耐心等待！",
+            message: "你的文章已提交，请耐心等待！",
             type: "success",
           });
         }
-      });
+       })
+
+      // blogUserReleaseContent(data).then((res) => {
+      //   if (res) {
+      //     this.articleForm.ArticleTitle = "";
+      //     this.articleForm.ArticleContent = "";
+      //     this.articleForm.ArticleClassification = "";
+      //     this.articleForm.ArticleLabel = "";
+      //     this.articleForm.ArticleSpecial = "";
+      //     const USERID = this.$store.getters.userId;
+      //     this.$store.commit("SET_VISITOR_ID", USERID);
+      //     const VISITORID = this.$store.getters.visitorId;
+      //     this.$router.push(`/userInfo/${VISITORID}/releaseList`);
+      //     this.$notify({
+      //       title: "成功",
+      //       message: "你的文章已提交至后台管理员审核，请耐心等待！",
+      //       type: "success",
+      //     });
+      //   }
+      // });
     },
 
     /**
      * 保存md文件
      */
     saveMd(value) {
-      this.articleForm.article_content = value;
+      this.articleForm.ArticleContent = value;
     },
 
     /**
@@ -347,9 +371,9 @@ export default {
       for (let pos in this.img_file) {
         let formdata = new FormData();
         formdata.append("file", this.img_file[pos]);
-        formdata.append("module", defaultSettings.articleTag);
+        formdata.append("module", action);
         const data = {
-          url: defaultSettings.uploadImgUrl,
+          url: action,
           method: "POST",
           data: formdata,
         };
@@ -363,9 +387,9 @@ export default {
 
     //封面上传成后
     handleAvatarSuccess(response) {
-      if (response.code == 200) {
-        this.articleForm.cover_img_id = response.data.id;
-        this.articleForm.cover_img_url = response.data.img_path;
+      if (response.Code == 200) {
+        //this.articleForm.CoverImgId = response.Data.id;
+        this.articleForm.CoverImgUrl = response.Data;
         this.$notify({
           title: "封面上传成功",
           message: "你的封面已经上传成功，记得点击保存按钮哦！",
@@ -411,21 +435,38 @@ export default {
       this.loading.preservationLoading = true;
       this.$refs.md.save();
       await this.$refs.md.uploadMdImgs();
-      data.article_content = this.articleForm.article_content;
+      data.ArticleContent = this.articleForm.ArticleContent;
 
       data.status = 4;
       this.$refs.md.save();
-
-      blogUserReleaseContent(data).then((res) => {
-        if (res.code == 200) {
-          this.articleForm.id = res.data;
-          this.$notify.success({
+             ArticleService.CreateArticle(data).then(res=>{
+                if (res) {
+          this.articleForm.ArticleTitle = "";
+          this.articleForm.ArticleContent = "";
+          this.articleForm.ArticleClassification = "";
+          this.articleForm.ArticleLabel = "";
+          this.articleForm.ArticleSpecial = "";
+          const USERID = this.$store.getters.userId;
+          this.$store.commit("SET_VISITOR_ID", USERID);
+          const VISITORID = this.$store.getters.visitorId;
+          this.$router.push(`/userInfo/${VISITORID}/releaseList`);
+          this.$notify({
             title: "成功",
-            message: "文章保存成功",
+            message: "你的文章已提交，请耐心等待！",
+            type: "success",
           });
-          this.loading.preservationLoading = false;
         }
-      });
+       })
+      // blogUserReleaseContent(data).then((res) => {
+      //   if (res.code == 200) {
+      //     this.articleForm.id = res.data;
+      //     this.$notify.success({
+      //       title: "成功",
+      //       message: "文章保存成功",
+      //     });
+      //     this.loading.preservationLoading = false;
+      //   }
+      // });
     },
 
     //鼠标移入输入框
@@ -457,7 +498,7 @@ export default {
         reader.readAsText(mdFile, "UTF-8");
         reader.onload = (e) => {
           const mdContent = e.target.result;
-          this.articleForm.article_content = mdContent;
+          this.articleForm.ArticleContent = mdContent;
         };
       } else {
         this.$notify.error({
@@ -473,13 +514,13 @@ export default {
   computed: {
     // 动态拼接上传路径
     action() {
-      return baseSetting.baseURL + baseSetting.uploadImgUrl;
+      return process.env.VUE_APP_API_URL + '/User/UPLoadPhoto';
     },
 
     // 设置请求头参数 token
     headers() {
       return {
-        Authorization: this.$store.getters.token,
+       Authorization:"Bearer "+ this.$store.getters.token,
       };
     },
   },

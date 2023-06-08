@@ -83,6 +83,7 @@ namespace Blog.Application.Services.Impl
                 new Claim("hrcode", Admin.Account, ClaimTypes.Name),
                 new Claim("Name", Admin.Name, ClaimValueTypes.String),
                 new Claim("Account", Admin.Account, ClaimValueTypes.String),
+                new Claim("Email", Admin.Email, ClaimValueTypes.String),
                 new Claim("OpenId", Admin.Account, ClaimValueTypes.String),
                 new Claim("Post", Admin.Post, ClaimValueTypes.String),
                 new Claim("Province", Admin.Province, ClaimValueTypes.String),

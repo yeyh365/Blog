@@ -75,7 +75,7 @@
                 <img
                   width="100%"
                   height="100%"
-                  :src="item.cover_img_url?$utils.imgUrl(item.cover_img_url):uncomplete"
+                  :src="item.CoverImgUrl?$utils.imgUrl(item.CoverImgUrl):uncomplete"
                   alt=""
                 />
               </div>
@@ -83,45 +83,46 @@
                 class="article-title"
                 @click="toReadArticle(item)"
               >
-                <h4>{{ item.article_title }}</h4>
+                <h4>{{ item.ArticleTitle }}</h4>
               </div>
               <div
                 class="article-tage"
-                v-if="$utils.isObject(item.getArticleClassification)"
+                
               >
                 <el-tag
                   size="mini"
                   effect="dark"
                   class="item-tag"
+                  v-for="(value, key) in item.Classification"
                 ><i class="el-icon-folder-opened"></i>
-                  <span>{{item.getArticleClassification.classification_name}}</span>
+                  <span>{{value.TypeName}}</span>
                 </el-tag>
                 <el-tag
                   size="mini"
                   type="success"
                   effect="dark"
                   class="item-tag"
-                  v-for="(value, key) in item.special"
+                  v-for="(value, key) in item.Special"
                 ><i class="el-icon-collection-tag"></i>
-                  {{ value.special_name }}</el-tag>
+                  {{ value.TypeName }}</el-tag>
                 <el-tag
                   size="mini"
                   type="info"
                   class="item-tag"
-                  v-for="(value, key) in item.label"
-                ><i class="el-icon-s-flag"></i>{{ value.label_name }}</el-tag>
+                  v-for="(value, key) in item.Label"
+                ><i class="el-icon-s-flag"></i>{{ value.TypeName }}</el-tag>
               </div>
               <div class="article-time">
                 <div class="time">
-                  <span>{{ $utils.getPastTimes(item.create_time) }}</span>
+                  <span>{{ $utils.getPastTimes(item.Created) }}</span>
                 </div>
                 <div class="other">
                   <span class="other-item"><i class="el-icon-chat-dot-square"></i>
-                    {{ item.articleCommentNum }}</span>
-                  <span class="other-item"><i class="el-icon-view"></i> {{ item.browse_num }}</span>
-                  <span class="other-item"><i class="el-icon-star-off"></i> {{ item.thumbs_num }}</span>
+                    {{ item.ArticleCommentNum }}</span>
+                  <span class="other-item"><i class="el-icon-view"></i> {{ item.BrowseNumCount }}</span>
+                  <span class="other-item"><i class="el-icon-star-off"></i> {{ item.ThumbsNum }}</span>
                   <span class="other-item"><i class="el-icon-collection-tag"></i>
-                    {{ item.collection_num }}</span>
+                    {{ item.CollectionNum }}</span>
                   <el-dropdown
                     style="margin-left: 20px"
                     size="mini"
@@ -181,9 +182,9 @@
             <el-pagination
               background
               layout="prev, pager, next"
-              :total="filterForm.total"
-              :page-size='filterForm.list_rows'
-              :current-page='filterForm.page'
+              :Total="filterForm.Total"
+              :Page-size='filterForm.Limit'
+              :current-Page='filterForm.Page'
               @current-change='currentChange'
               small
             >
@@ -242,6 +243,7 @@ import {
   appealArticle,
   deleteArticle,
 } from "@/api/article/articleList";
+import ArticleService from '@/api/services/ArticleService'
 import { mapGetters } from "vuex";
 export default {
   name: "ReleaseList",
@@ -263,9 +265,10 @@ export default {
       activeArticleType: 0,
       //过滤表单
       filterForm: {
-        list_rows: 6,
-        page: 1,
-        total: 0,
+        Limit: 6,
+        Page: 1,
+        Total: 0
+        
       },
 
       //文章数据
@@ -330,30 +333,51 @@ export default {
         this.isSelf = true;
       }
       const query = {
-        status: this.activeArticleType,
-        userId: this.userId,
+        AuditStatus: this.activeArticleType,
+        UserId: this.userId,
         ...this.filterForm,
       };
-      getArticleTypeList(query).then((res) => {
-        if (type) {
-          this.articleList = Object.assign([], res.data.data);
+      ArticleService.GetArticleList(query).then(res=>{
+           
+                if (type) {
+          this.articleList = Object.assign([], res.Data);
         } else {
-          this.articleList = this.articleList.concat(res.data.data);
+          this.articleList = this.articleList.concat(res.Data);
 
           // 控制获取更改按钮显示
-
+          console.log('this.articleList',this.articleList)
           this.loading = false;
         }
-        this.filterForm.total = res.data.total;
+        this.filterForm.Total = res.Total;
         if (
-          this.filterForm.total <
-          this.filterForm.list_rows * this.filterForm.page
+          this.filterForm.Total <
+          this.filterForm.Limit * this.filterForm.Page
         ) {
           this.showGetMoreBtn = false;
         } else {
           this.showGetMoreBtn = true;
         }
-      });
+      })
+      // getArticleTypeList(query).then((res) => {
+      //   if (type) {
+      //     this.articleList = Object.assign([], res.data.data);
+      //   } else {
+      //     this.articleList = this.articleList.concat(res.data.data);
+
+      //     // 控制获取更改按钮显示
+
+      //     this.loading = false;
+      //   }
+      //   this.filterForm.Total = res.data.Total;
+      //   if (
+      //     this.filterForm.Total <
+      //     this.filterForm.Limit * this.filterForm.Page
+      //   ) {
+      //     this.showGetMoreBtn = false;
+      //   } else {
+      //     this.showGetMoreBtn = true;
+      //   }
+      // });
     },
 
     /**
@@ -399,9 +423,11 @@ export default {
     /**
      * 删除文章
      */
-    deleteItem({ id }) {
-      deleteArticle({ id }).then((res) => {
-        if (res.code == 200) {
+    deleteItem(item) {
+      console.log("item",item)
+      const Id = item.Id
+      ArticleService.DeleteArticle(Id).then(res=>{
+        if (res.Code == 200) {
           this.init();
           this.$notify({
             title: "成功",
@@ -409,7 +435,17 @@ export default {
             type: "success",
           });
         }
-      });
+      })
+      // deleteArticle({ id }).then((res) => {
+      //   if (res.code == 200) {
+      //     this.init();
+      //     this.$notify({
+      //       title: "成功",
+      //       message: "你的文章已被删除！",
+      //       type: "success",
+      //     });
+      //   }
+      // });
     },
     /**
      * 点击下拉菜单(申诉)
@@ -432,8 +468,10 @@ export default {
     /**
      * 去阅读文章
      */
-    toReadArticle({ id }) {
-      this.$router.push({ name: "ReadArticle", query: { id } });
+    toReadArticle(item) {
+      console.log(item)
+      const Id=item.Id
+      this.$router.push({ name: "ReadArticle", query: { Id } });
     },
 
     /**
@@ -459,24 +497,24 @@ export default {
     },
 
     //分页切换
-    currentChange(page) {
-      this.filterForm.page = page;
+    currentChange(Page) {
+      this.filterForm.Page = Page;
       this.init();
     },
 
     // 获取更多
     getMore() {
       this.loading = true;
-      this.filterForm.page++;
+      this.filterForm.Page++;
       this.init(false);
     },
 
     // 下拉框改变筛选条件
     changeFilterform() {
       this.filterForm = {
-        list_rows: 6,
-        page: 1,
-        total: 0,
+        Limit: 6,
+        Page: 1,
+        Total: 0,
       };
     },
   },

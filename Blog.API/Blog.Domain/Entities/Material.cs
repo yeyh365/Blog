@@ -70,13 +70,13 @@ namespace Blog.Domain.Entities
         /// Slot
         /// </summary>
         [Column("status")]
-        public string? Status { get; set; } = string.Empty;
+        public int? Status { get; set; }
 
         /// <summary>
         /// ParentKey
         /// </summary>
         [Column("userid")]
-        public int? Userid { get; set; }
+        public int? UserId { get; set; }
         /// <summary>
         /// 内容备注
         /// </summary>

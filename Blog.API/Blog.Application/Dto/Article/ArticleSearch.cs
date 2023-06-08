@@ -12,11 +12,13 @@ namespace Blog.Application.Dto
          public int? UserId { get; set; }
         public string? ArticleTitle { get; set; }
         public string? ArticleContent { get; set; }
+        public int? AuditStatus { get; set; }
 
         public int? ClassIfication { get; set;}
         public int? Label { get; set; }
         public int? Special { get; set; }
-        public string? status { get; set; }
+        public string? Status { get; set; }
+        public string? Interaction { get; set; }
 
         
     }

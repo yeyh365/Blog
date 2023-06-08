@@ -151,9 +151,9 @@ export default {
   },
   created() {
     //页面刷新时判断有没有用户信息 用来控制头像显示
-    if (this.userInfo && this.userInfo.user.nickname != undefined) {
-      this.avatar = this.userInfo.user.avatar_url;
-      this.name = this.userInfo.user.nickname;
+    if (this.userInfo && this.userInfo.Name != undefined) {
+      this.avatar = this.userInfo.Photo;
+      this.name = this.userInfo.Name;
       this.hasUserInfo = true;
     }
     if (this.token) {
@@ -168,8 +168,8 @@ export default {
     userInfo(newVal) {
       if (newVal) {
         this.hasUserInfo = true;
-        this.name = newVal.user && newVal.user.nickname;
-        this.avatar = newVal.user && newVal.user.avatar_url;
+        this.name = newVal.user && newVal.Name;
+        this.avatar = newVal.user && newVal.Photo;
       } else {
         this.hasUserInfo = false;
         this.name = "登录";
@@ -204,7 +204,7 @@ export default {
     //点击退出登录
     toLogOut() {
       //从vuex获取用户名
-      const userName = this.$store.getters.userInfo.user.nickname;
+      const userName = this.$store.getters.userInfo.Name;
       const alertTitle = `你好！${userName}`;
       const alertContainer = `<i style='color:red'>你确定要退出当前登陆吗？</i>`;
       this.$alert(alertContainer, alertTitle, {

@@ -27,6 +27,8 @@ namespace Blog.Application.Services.Impl
         #region init
         private readonly IRepository<Dictionary> _DictionaryRepository;
         private readonly IRepository<Keywords> _KeywordsRepository;
+        private readonly IRepository<User> _UserRepository;
+
         /// <summary>
         /// DictionaryService
         /// </summary>
@@ -40,6 +42,8 @@ namespace Blog.Application.Services.Impl
         {
             this._DictionaryRepository = this._repositoryProvider.Create<Dictionary>(this._context);
             this._KeywordsRepository = this._repositoryProvider.Create<Keywords>(this._context);
+            this._UserRepository = this._repositoryProvider.Create<User>(this._context);
+
 
         }
         #endregion
@@ -220,7 +224,27 @@ namespace Blog.Application.Services.Impl
             result.Data = ResultList;
             return result;
         }
-
+        /// <summary>
+        /// 获取项目详情(Type,支持多类型传输)
+        /// </summary>
+        /// <param name="Type">类型</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<ResultModel> GetProjectDictionaryByType(string type, CancellationToken cancellationToken)
+        {
+            var result = new ResultModel();
+            List<string> TypeList = type.Split(';').ToList();
+            var DataList = _DictionaryRepository.Get(x => TypeList.Contains(x.Name)).ToList();
+            var ResultList = _mapper.Map<List<Dictionary>, List<DictionaryDto>>(DataList);
+            var UserList = _UserRepository.GetAll();
+            ResultList.ForEach( x =>
+            {
+                x.User = UserList.Where(t => t.Id == x.ParentKey).FirstOrDefault();
+            }
+            );
+            result.Data = ResultList;
+            return result;
+        }
         #endregion
     }
 }

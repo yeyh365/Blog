@@ -43,7 +43,7 @@ namespace Blog.Application.Dto
         /// <summary>
         /// 
         /// </summary>
-        public string? IsAppeal { get; set; } = string.Empty;
+        public int? IsAppeal { get; set; }
         /// <summary>
         /// 发布用户id
         /// </summary>
@@ -51,11 +51,17 @@ namespace Blog.Application.Dto
         /// <summary>
         /// 状态
         /// </summary>
-        public string? Status { get; set; } = string.Empty;
+        public int? Status { get; set; }
         /// <summary>
         /// 备注
         /// </summary>
         public string? Remark { get; set; } = string.Empty;
+
+        public int? ArticleClassification { get; set; }
+
+        public int[]? ArticleSpecial { get; set; } = null;
+
+        public int[]? ArticleLabel { get; set; } = null;
 
     }
 }

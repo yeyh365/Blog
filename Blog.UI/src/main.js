@@ -34,7 +34,7 @@ import 'animate.css'
 //引入md5加密方式
 import md5 from 'js-md5';
 import { imgUrl } from '@/utils/imgUrl' // 导入自己处理图片路径的工具类
-import { getPastTimes } from "@/utils/time"; //时间处理类
+import { getPastTimes,formatDateTime } from "@/utils/time"; //时间处理类
 
 //音乐播放器全局注册
 import APlayer from "@moefe/vue-aplayer";
@@ -78,6 +78,7 @@ import { isObject } from "@/utils/validate";
 Vue.prototype.$utils = {
     md5,
     imgUrl,
+    formatDateTime,
     getPastTimes,
     isObject, isMobile
 };

@@ -58,6 +58,11 @@ namespace Blog.Application.Services.Impl
             {
                 Query = Query.Where(t => t.MaterialName.Contains(Search.MaterialName));
             }
+
+            if (Search.AuditStatus>=0)
+            {
+                Query = Query.Where(t => t.Status==Search.AuditStatus);
+            }
             //if (!string.IsNullOrEmpty(Search.Phone))
             //{
             //    Query = Query.Where(t => t.Phone.Equals(Search.Phone));
@@ -79,7 +84,8 @@ namespace Blog.Application.Services.Impl
                 x.BrowseNum = interactions.Where(t => t.TypeName == "BrowseMaterial" && t.ArticleId == x.Id && t.Status == true).Count();
                 if (Search.UserId > 0)
                 {
-                    x.IsLike = interactions.Where(t => t.TypeName == "Collection" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault().Status;
+                    var TempIsLike = interactions.Where(t => t.TypeName == "Collection" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault();
+                    x.IsLike = TempIsLike==null ? false : true;
                 }
                
             });
@@ -174,7 +180,7 @@ namespace Blog.Application.Services.Impl
                 result.Message = "不存在";
                 return result;
             }
-            DataModel.User = _UserRepository.Get(t => t.Id == DataModel.Userid);
+            DataModel.User = _UserRepository.Get(t => t.Id == DataModel.UserId);
            // MaterialDto DataInfo = _mapper.Map<Material, MaterialDto>(DataModel);
             result.Data = DataModel;
             return result;
@@ -182,10 +188,28 @@ namespace Blog.Application.Services.Impl
         public async Task<ResultModel> CreateMaterial(MaterialItem Dto, CancellationToken cancellationToken)
         {
             ResultModel result = new ResultModel();
+            List<MaterialArticleKeywords> list = new List<MaterialArticleKeywords>();
+            MaterialArticleKeywords materialKeywords = new MaterialArticleKeywords();
             var DataModel = _mapper.Map<Material>(Dto);
             using (var trans = this._context.BeginTrainsaction())
             {
                 _MaterialRepository.Insert(DataModel);
+                await this._context.SaveChangesAsync(cancellationToken);
+                if (Dto.Label!=null)
+                {
+                    for (int i = 0; i < Dto.Label.Length; i++)
+                    {
+                        materialKeywords.MateriaArticlelId = DataModel.Id;
+                        materialKeywords.Type = "Materia";
+                        materialKeywords.KeywordsId= Dto.Label[i];
+                        list.Add(materialKeywords);
+                    }
+
+                }
+                list.ForEach(x =>
+                {
+                    _MaterialKeywordsRepository.Insert(x);
+                });
                 await this._context.SaveChangesAsync(cancellationToken);
                 trans.Commit();
                 result.Message = "创建成功！";

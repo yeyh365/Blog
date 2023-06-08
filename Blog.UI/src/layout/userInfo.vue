@@ -221,19 +221,19 @@ export default {
   },
   created() {
     this.configData();
-    if (this.userInfo && this.userInfo.user.avatar_url != undefined) {
+    if (this.userInfo && this.userInfo.Photo != undefined) {
       this.havaUserInfo = true;
       this.isNetImg = false;
-      this.userNickname = this.userInfo.user.nickname;
-      this.userInfoAvatar = this.userInfo.user.avatar_url;
+      this.userNickname = this.userInfo.Name;
+      this.userInfoAvatar =this.userInfo.Photo;
       this.isHaveInfo = true;
-      this.otherInfo = Object.assign({}, this.userInfo.other);
+      this.otherInfo = Object.assign({}, this.userInfo.InteractionNum);
     } else {
       this.isHaveInfo = false;
     }
   },
   mounted() {
-    this.initWebSocket();
+    //this.initWebSocket();
     if (this.socketInfo.length > 0) {
       this.$refs.infoIcon.classList.add("info-btn");
     }
@@ -281,7 +281,7 @@ export default {
     /* 连接成功 */
     socketOpen() {
       const data = {
-        userId: this.userInfo.user.id,
+        userId: this.userInfo.Id,
         type: "bind",
         content: "初次连接",
       };
@@ -363,10 +363,10 @@ export default {
       if (newVal) {
         this.isNetImg = false;
         this.havaUserInfo = true;
-        this.userNickname = newVal.user.nickname;
-        this.userInfoAvatar = newVal.user.avatar_url;
+        this.userNickname = newVal.Name;
+        this.userInfoAvatar = newVal.Photo;
         this.isHaveInfo = true;
-        this.otherInfo = Object.assign({}, this.userInfo.other);
+        this.otherInfo = Object.assign({}, this.userInfo.InteractionNum);
       } else {
         this.isNetImg = true;
         this.havaUserInfo = false;

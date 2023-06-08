@@ -152,7 +152,7 @@ import {
   getMaterialListByPages,
 } from "@/api/material/materialRecommend";
 import MaterialService from '@/api/services/MaterialService'
-import DictDataService from '@/api/services/DictDataService'
+import HomeService from '@/api/services/HomeService'
 export default {
   name: "Home",
   components: {
@@ -191,7 +191,7 @@ export default {
         "filter-platform",
         "filter-frame",
       ],
-    };
+    }; 
   },
   created() {
     this.init(true);
@@ -237,6 +237,9 @@ export default {
     //配置数据
     configData() {
       //获取轮播图
+      HomeService.GetRecommendInfo().then(res=>{
+         this.bannerList = Object.assign([], res.Data);
+      })
       getBannerList().then((res) => {
         this.bannerList = Object.assign([], res.data);
       });

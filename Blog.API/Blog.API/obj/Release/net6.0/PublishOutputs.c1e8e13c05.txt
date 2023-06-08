@@ -41,11 +41,13 @@ E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\NPOI.OOXML.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\NPOI.OpenXml4Net.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\NPOI.OpenXmlFormats.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\NPOI.dll
+E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\Pipelines.Sockets.Unofficial.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\BouncyCastle.Crypto.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\ICSharpCode.SharpZipLib.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\SixLabors.Fonts.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\SixLabors.ImageSharp.dll
+E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\StackExchange.Redis.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

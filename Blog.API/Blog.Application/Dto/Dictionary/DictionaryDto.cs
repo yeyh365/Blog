@@ -13,5 +13,6 @@ namespace Blog.Application.Dto
     public class DictionaryDto : Dictionary
     {
          public List<Keywords> Keywords { get; set; }
+        public User User { get; set; }
     }
 }

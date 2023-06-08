@@ -49,13 +49,18 @@ namespace Blog.Domain.Entities
         /// ParentKey
         /// </summary>
         [Column("parentkey")]
-        public string? ParentKey { get; set; } = string.Empty;
+        public int? ParentKey { get; set; }
 
         /// <summary>
         /// 内容备注
         /// </summary>
         [Column("remark")]
         public string? Remark { get; set; } = string.Empty;
+        /// <summary>
+        /// 内容备注
+        /// </summary>
+        [Column("remark1")]
+        public string? Remark1 { get; set; } = string.Empty;
 
     }
 }

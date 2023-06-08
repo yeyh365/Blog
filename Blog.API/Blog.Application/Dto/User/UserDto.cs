@@ -22,5 +22,22 @@ namespace Blog.Application.Dto
         /// 省市区权限
         /// </summary>
         public List<DictionaryDto> DicList { get; set; }
+        /// <summary>
+        /// 省市区权限
+        /// </summary>
+        public InteractionDtoNum InteractionNum { get; set; }
     }
+    public class InteractionDtoNum {
+        public int? CollectionNum { get; set; } = 0;
+        public int? FansNum { get; set; } = 0;
+        public int? FollowNum { get; set; } = 0;
+        public int? ArticleNum { get; set; } = 0;
+
+        public int? MaterialNum { get; set; } = 0;
+
+
+
+
+    }
+
 }

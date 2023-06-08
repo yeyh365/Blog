@@ -28,7 +28,7 @@ namespace Blog.Application.Dto
         /// <summary>
         /// 用户账号
         /// </summary>
-        public string? Account { get; set; } = string.Empty;
+        public string Account { get; set; } = string.Empty;
         /// <summary>
         /// 用户邮箱
         /// </summary>
@@ -38,6 +38,11 @@ namespace Blog.Application.Dto
         /// 用户密码
         /// </summary>
         public string? PassWord { get; set; } = string.Empty;
+        /// <summary>
+        /// 职务
+        /// </summary>
+        public string? Photo { get; set; } = string.Empty;
+
 
         /// <summary>
         /// 职务

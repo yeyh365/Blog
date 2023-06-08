@@ -197,9 +197,9 @@
           v-if="!$utils.isMobile()"
           background
           layout="prev, pager, next"
-          :total="filterForm.total"
-          :page-size='filterForm.list_rows'
-          :current-page='filterForm.page'
+          :Total="filterForm.Total"
+          :Page-size='filterForm.Limit'
+          :current-Page='filterForm.Page'
           @current-change='currentChange'
           small
         >
@@ -242,9 +242,9 @@ export default {
 
       //分页
       filterForm: {
-        list_rows: 6,
-        page: 1,
-        total: 0,
+        Limit: 6,
+        Page: 1,
+        Total: 0,
       },
 
       // 获取更多按钮加载状态
@@ -287,12 +287,12 @@ export default {
           // 控制获取更改按钮显示
           this.loading = false;
         }
-        this.filterForm.total = res.data.total;
-        this.followNum = res.data.total;
+        this.filterForm.Total = res.data.Total;
+        this.followNum = res.data.Total;
 
         if (
           this.followNum <=
-          this.filterForm.list_rows * this.filterForm.page
+          this.filterForm.Limit * this.filterForm.Page
         ) {
           this.showFollowsGetMoreBtn = false;
         } else {
@@ -310,9 +310,9 @@ export default {
           this.loading = false;
         }
 
-        this.filterForm.total = res.data.total;
-        this.fansNum = res.data.total;
-        if (this.fansNum <= this.filterForm.list_rows * this.filterForm.page) {
+        this.filterForm.Total = res.data.Total;
+        this.fansNum = res.data.Total;
+        if (this.fansNum <= this.filterForm.Limit * this.filterForm.Page) {
           this.showFansGetMoreBtn = false;
         } else {
           this.showFansGetMoreBtn = true;
@@ -371,8 +371,8 @@ export default {
     },
 
     //分页切换
-    currentChange(page) {
-      this.filterForm.page = page;
+    currentChange(Page) {
+      this.filterForm.Page = Page;
       if (this.isFollow) {
         this.getFollow();
       } else {
@@ -383,16 +383,16 @@ export default {
     // 获取更多
     getMore() {
       this.loading = true;
-      this.filterForm.page++;
+      this.filterForm.Page++;
       this.init(false, this.isFollow, !this.isFollow);
     },
   },
   watch: {
     isFollow(value) {
       this.filterForm = {
-        list_rows: 6,
-        page: 1,
-        total: 0,
+        Limit: 6,
+        Page: 1,
+        Total: 0,
       };
     },
   },

@@ -59,7 +59,7 @@ namespace Blog.Domain.Entities
         /// 
         /// </summary>
         [Column("isappeal")]
-        public string? IsAppeal { get; set; } = string.Empty;
+        public int? IsAppeal { get; set; }
         /// <summary>
         /// 发布用户id
         /// </summary>
@@ -69,7 +69,7 @@ namespace Blog.Domain.Entities
         /// 状态
         /// </summary>
         [Column("status")]
-        public string? Status { get; set; } = string.Empty;
+        public int? Status { get; set; }
         /// <summary>
         /// 发布用户id
         /// </summary>

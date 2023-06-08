@@ -311,12 +311,13 @@ export default {
             //判断有没有用户信息
             if (!store.state.user.info) {
               //获取用户信息
-              //store.dispatch("GetInfo");
+              store.dispatch("GetInfo");
             }
+            console.log('111',store.state.user.info)
             setTimeout(() => {
               this.$notify({
                 title: "登录成功！",
-                message: `欢迎回来，${store.state.user.info.user.nickname}`,
+                message: `欢迎回来，${store.state.user.info.Name}`,
                 type: "success",
               });
               this.show = false;

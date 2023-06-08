@@ -20,6 +20,7 @@ namespace Blog.WebAPI.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+
     //[Authorize(Roles = "SuperAdmin,ProvinceAdmin,CityAdmin,CountyAdmin,CountyUser")]
     public class UserController : ControllerBase
     {
@@ -27,15 +28,17 @@ namespace Blog.WebAPI.Controllers
         private readonly IUserService _UserService;
         private readonly ILogService _LogService;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _hostingEnvironment;
         /// <summary>
         /// UserController
         /// </summary>
         /// <param name="UserService"></param>
-        public UserController(IUserService UserService, ILogService logService, IHttpContextAccessor _httpContextAccessor)
+        public UserController(IUserService UserService, ILogService logService, IHttpContextAccessor _httpContextAccessor, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             this._UserService = UserService;
             this._LogService = logService;
             this._httpContextAccessor = _httpContextAccessor;
+            _hostingEnvironment = hostingEnvironment;
         }
         #endregion
         #region Public
@@ -90,7 +93,7 @@ namespace Blog.WebAPI.Controllers
         /// <param name="Dto">用户信息</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        [HttpPut, Route("UpdateUser")]
+        [HttpPost, Route("UpdateUser")]
         public async Task<ResultModel> UpdateUser(UserItem Dto, CancellationToken cancellationToken)
         {
             #region Log日志
@@ -122,9 +125,16 @@ namespace Blog.WebAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost, Route("FindLoginUser")]
+        [Authorize]
         public async Task<ResultModel> FindLoginUser(CancellationToken cancellationToken)
         {
             return await _UserService.FindLoginUser(cancellationToken);
+        }
+        [HttpPost, Route("UpLoadPhoto")]
+        public async Task<ResultModel> UpLoadPhoto([FromServices] Microsoft.AspNetCore.Hosting.IHostingEnvironment environment, CancellationToken cancellationToken)
+        {
+            IFormFileCollection files = Request.Form.Files;
+            return await _UserService.UpLoadPhoto(files, _hostingEnvironment.ContentRootPath, cancellationToken);
         }
         #endregion
     }

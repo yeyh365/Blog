@@ -203,14 +203,15 @@
                 size="mini"
                 effect="dark"
                 class="item-tag"
+                v-for="(value, key) in item.Classification"
               ><i class="el-icon-folder-opened"></i>
-                {{ item.Classification=item.Classification.length===0?"111":"222" }}</el-tag>
+                {{ value.TypeName }}</el-tag>
               <el-tag
                 size="mini"
                 type="success"
                 effect="dark"
                 class="item-tag"
-                v-for="(value, key) in item.Special"
+                v-for="(value,key) in item.Special"
               ><i class="el-icon-collection-tag"></i>
                 {{ value.TypeName }}</el-tag>
               <el-tag
@@ -237,7 +238,7 @@
                   <span>{{ item.UserInfo.Name }}</span>
                 </div>
                 <div>
-                   <!-- <span>{{ item.Created=item.Created?'没时间':$utils.getPastTimes(item.Created) }}</span>  -->
+                   <span>{{ $utils.getPastTimes(item.Created) }}</span> 
                 </div>
               </div>
               <div class="other">
@@ -285,7 +286,7 @@ export default {
 
       //过滤表单
       filterForm: {
-        status: "excellent",
+        Status: "excellent",
         ClassIfication: "",
         Special: "",
         Label: "",
@@ -303,7 +304,7 @@ export default {
       //顶部图片展示内容
       imgContent: {
         imgUrl:
-          "https://yinheyibei.oss-cn-beijing.aliyuncs.com/BLOG-MD/index.jpg",
+          "UploadFiles\\Photos\\230608144021_ba978f39-7fed-417b-9cae-9ffbbbc6b45a.jpg",
         text: "洞幽察微",
         describe: "相信奇迹的人，一定也和奇迹一样了不起吧！",
         status: 0,
@@ -420,7 +421,7 @@ export default {
     },
     //改变排序方式
     changeFilterFormStatus(status) {
-      this.filterForm.status = status;
+      this.filterForm.Status = status;
       this.showGetMoreBtn = true;
       this.Pages.Page = 1;
       this.init(true);

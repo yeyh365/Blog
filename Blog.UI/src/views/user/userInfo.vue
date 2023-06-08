@@ -239,11 +239,11 @@ export default {
       } else {
         this.isSelf = true;
       }
-      getVisitorInfo({ userId: this.userId }).then((res) => {
-        this.$store.commit("SET_VISITOR_INFO", res.data);
-        this.userInfos = Object.assign({}, res.data.user);
-        this.other = Object.assign({}, res.data.other);
-      });
+      // getVisitorInfo({ userId: this.userId }).then((res) => {
+      //   this.$store.commit("SET_VISITOR_INFO", res.data);
+      //   this.userInfos = Object.assign({}, res.data.user);
+      //   this.other = Object.assign({}, res.data.other);
+      // });
     },
     toWriteArticle() {
       this.$router.push("/release");

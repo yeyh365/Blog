@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Blog.Application.Services
 {
@@ -86,6 +87,14 @@ namespace Blog.Application.Services
         /// <returns></returns>
 
         Task<ResultModel> FindLoginUser(CancellationToken cancellationToken);
+        /// <summary>
+        /// 上传头像
+        /// </summary>
+        /// <param name="files"></param>
+        /// <param name="webRootPath"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<ResultModel> UpLoadPhoto(IFormFileCollection files, string webRootPath, CancellationToken cancellationToken);
         #endregion
     }
 }

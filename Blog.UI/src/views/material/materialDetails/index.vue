@@ -227,7 +227,7 @@ export default {
     };
   },
   created() {
-    this.materialId = this.$route.query.id;
+    this.materialId = this.$route.query.Id;
     this.init();
   },
   methods: {
@@ -258,11 +258,11 @@ export default {
           if (this.$store.getters.userInfo) {
             const query = {
               materialId: this.materialId,
-              userId: this.$store.getters.userInfo.user.id,
+              userId: this.$store.getters.UserId,
             };
-            hasCollection(query).then((res) => {
-              this.isCollection = res.data;
-            });
+            // hasCollection(query).then((res) => {
+            //   this.isCollection = res.data;
+            // });
           }
         }
       })

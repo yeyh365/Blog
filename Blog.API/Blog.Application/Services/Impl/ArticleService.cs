@@ -83,6 +83,17 @@ namespace Blog.Application.Services.Impl
             {
                 Query = Query.Where(t => t.Id==Search.Id);
             }
+            if (Search.AuditStatus >= 0)
+            {
+                Query = Query.Where(t => t.Status == Search.AuditStatus);
+            }
+            if(Search.Interaction== "Collection")
+            {
+                Query = from q in Query 
+                        join i in _InteractionRepository.Get(t=>t.UserId==Search.UserId && t.TypeName== Search.Interaction) on q.Id equals i.ArticleId
+                        select q;
+
+            }
             //if (!string.IsNullOrEmpty(Search.Phone))
             //{
             //    Query = Query.Where(t => t.Phone.Equals(Search.Phone));
@@ -129,9 +140,12 @@ namespace Blog.Application.Services.Impl
                 x.BrowseNumCount = interactions.Where(t => t.TypeName == "Browse" && t.ArticleId == x.Id && t.Status == true).Count();
                 if (Search.UserId>0)
                 {
-                    x.IsCollection = interactions.Where(t => t.TypeName == "Collection" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault().Status;
-                    x.IsFollow = interactions.Where(t => t.TypeName == "Follow" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault().Status;
-                    x.IsThumbs = interactions.Where(t => t.TypeName == "Thumbs" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault().Status;
+                    var TempIsCollection = interactions.Where(t => t.TypeName == "Collection" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault();
+                    x.IsCollection = TempIsCollection==null?false: TempIsCollection.Status;
+                    var TempIsFollow = interactions.Where(t => t.TypeName == "Follow" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault();
+                    x.IsFollow = TempIsFollow == null ? false : TempIsFollow.Status;
+                    var TempIsThumbs = interactions.Where(t => t.TypeName == "Thumbs" && t.ArticleId == x.Id && t.UserId == Search.UserId).FirstOrDefault();
+                    x.IsThumbs = TempIsThumbs == null ? false : TempIsThumbs.Status;
 
                 }
 
@@ -165,11 +179,11 @@ namespace Blog.Application.Services.Impl
             var Total =  Query.Count();
             if (Search.Page > 0 && Search.Limit > 0)
             {
-                if (Search.status == "hot")
+                if (Search.Status == "hot")
                 {
                     Query = Query.OrderByDescending(x => x.BrowseNumCount).Skip((Search.Page - 1) * Search.Limit).Take(Search.Limit).ToList();
                 }
-                else if (Search.status == "new")
+                else if (Search.Status == "new")
                 {
                     Query = Query.OrderByDescending(x => x.Created).Skip((Search.Page - 1) * Search.Limit).Take(Search.Limit).ToList();
                 }
@@ -204,6 +218,7 @@ namespace Blog.Application.Services.Impl
             ArticleSearch Search = new ArticleSearch()
             {
                 Id = Id,
+                UserId= UserId,
             };
             var Query = GetSearch(Search).FirstOrDefault();
            // var DataModel = await _ArticleRepository.Get(x => x.Id == Id).FirstOrDefaultAsync(cancellationToken);
@@ -227,10 +242,44 @@ namespace Blog.Application.Services.Impl
         public async Task<ResultModel> CreateArticle(ArticleItem Dto, CancellationToken cancellationToken)
         {
             ResultModel result = new ResultModel();
+            List<MaterialArticleKeywords> list = new List<MaterialArticleKeywords>();
+            MaterialArticleKeywords materialArticleKeywords = new MaterialArticleKeywords();
             var DataModel = _mapper.Map<Article>(Dto);
             using (var trans = this._context.BeginTrainsaction())
             {
                 _ArticleRepository.Insert(DataModel);
+                await this._context.SaveChangesAsync(cancellationToken);
+                materialArticleKeywords.MateriaArticlelId = DataModel.Id;
+                materialArticleKeywords.Type = "Article";
+                materialArticleKeywords.KeywordsId = Dto.ArticleClassification;
+                list.Add(materialArticleKeywords);
+                if (Dto.ArticleSpecial != null)
+                {
+                    for (int i = 0; i < Dto.ArticleSpecial.Length; i++)
+                    {
+                        MaterialArticleKeywords ArticleKeywords = new MaterialArticleKeywords();
+                        ArticleKeywords.MateriaArticlelId = DataModel.Id;
+                        ArticleKeywords.Type = "Article";
+                        ArticleKeywords.KeywordsId = Dto.ArticleSpecial[i];
+                        list.Add(ArticleKeywords);
+                    }
+                }
+                if (Dto.ArticleLabel != null)
+                {
+                    for (int i = 0; i < Dto.ArticleLabel.Length; i++)
+                    {
+                        MaterialArticleKeywords ArticleKeywords = new MaterialArticleKeywords();
+                        ArticleKeywords.MateriaArticlelId = DataModel.Id;
+                        ArticleKeywords.Type = "Article";
+                        ArticleKeywords.KeywordsId = Dto.ArticleLabel[i];
+                        list.Add(ArticleKeywords);
+                    }
+                }
+                list.ForEach(x =>
+                {
+                    _ArticleKeywordsRepository.Insert(x);
+                });
+                
                 await this._context.SaveChangesAsync(cancellationToken);
                 trans.Commit();
                 result.Message = "创建成功！";
@@ -248,6 +297,8 @@ namespace Blog.Application.Services.Impl
         public async Task<ResultModel> UpdateArticle(ArticleItem Dto, CancellationToken cancellationToken)
         {
             ResultModel result = new ResultModel();
+
+
             try
             {
 
@@ -259,6 +310,7 @@ namespace Blog.Application.Services.Impl
                     trans.Commit();
                     result.Message = "修改成功！";
                     result.Data = DataModel;
+
                 }
             }
             catch (Exception ee) 
@@ -403,12 +455,49 @@ namespace Blog.Application.Services.Impl
                     var ss = 1;
                 };
             }
-
-
-            
-
             return result;
         }
+        /// <summary>
+        /// 增加一个文章评论
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<ResultModel> CreateArticleComment(CommentItem Dto, CancellationToken cancellationToken)
+        {
+            ResultModel result = new ResultModel();
+            var DataModel = _mapper.Map<Comment>(Dto);
+            using (var trans = this._context.BeginTrainsaction())
+            {
+                _CommentRepository.Insert(DataModel);
+                await this._context.SaveChangesAsync(cancellationToken);
+                trans.Commit();
+                result.Message = "创建成功！";
+                result.Data = DataModel;
+            }
+            return result;
+        }
+        /// <summary>
+        /// 增加一个子级评论
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<ResultModel> CreateChildComment(CommentItem Dto, CancellationToken cancellationToken)
+        {
+            ResultModel result = new ResultModel();
+            var DataModel = _mapper.Map<Comment>(Dto);
+            using (var trans = this._context.BeginTrainsaction())
+            {
+                _CommentRepository.Insert(DataModel);
+                await this._context.SaveChangesAsync(cancellationToken);
+                trans.Commit();
+                result.Message = "创建成功！";
+                result.Data = DataModel;
+            }
+            return result;
+        }
+
         #endregion
     }
 }

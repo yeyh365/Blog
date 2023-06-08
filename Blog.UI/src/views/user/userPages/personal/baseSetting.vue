@@ -28,8 +28,8 @@
                 :before-upload="beforeAvatarUpload"
               >
                 <img
-                  v-if="userForm.avatar_url"
-                  :src="$utils.imgUrl(userForm.avatar_url)"
+                  v-if="userForm.Photo"
+                  :src="$utils.imgUrl(userForm.Photo)"
                   class="avatar"
                 />
                 <i
@@ -40,23 +40,23 @@
             </div>
           </el-form-item>
           <el-form-item
-            label="昵称"
-            prop="nickname"
+            label="账号"
+            prop="Account"
           >
             <el-input
-              v-model="userForm.nickname"
+              v-model="userForm.Account"
               :size="$utils.isMobile()?'':'small'"
               maxlength="10"
               show-word-limit
-              placeholder="请输入你的昵称 ！"
+              placeholder="请输入你的账户 ！"
             ></el-input>
           </el-form-item>
           <el-form-item
             label="邮箱"
-            prop="mailbox"
+            prop="Email"
           >
             <el-input
-              v-model="userForm.mailbox"
+              v-model="userForm.Email"
               :size="$utils.isMobile()?'':'small'"
               maxlength="30"
               placeholder="请输入你的邮箱！"
@@ -64,18 +64,18 @@
             ></el-input>
           </el-form-item>
           <el-form-item
-            label="电话"
-            prop="telephone"
+            label="昵称"
+            prop="Name"
           >
             <el-input
-              v-model="userForm.telephone"
+              v-model="userForm.Name"
               :size="$utils.isMobile()?'':'small'"
               maxlength="11"
               show-word-limit
-              placeholder="请输入你的联系电话！"
+              placeholder="请输入你的昵称！"
             ></el-input>
           </el-form-item>
-          <el-form-item label="性别">
+          <!-- <el-form-item label="性别">
             <el-select
               v-model="userForm.gender"
               placeholder="请选择性别"
@@ -91,7 +91,7 @@
               >
               </el-option>
             </el-select>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item label="签名">
             <el-input
               v-model="userForm.autograph"
@@ -120,24 +120,26 @@
 <script>
 import baseSetting from "@/config/defaultSettings"; // 引入全局基本配置
 import { getBlogUserInfo, updateBlogUserInfo } from "@/api/user/userInfo";
+import UserService from '@/api/services/UserService';
 export default {
   name: "BaseSetting",
   data() {
     return {
       //表单数据
       userForm: {
-        nickname: "", //昵称
-        telephone: "", //电话
-        mailbox: "", //邮箱
+        Account: "", //昵称
+        Name: "", //电话
+        Email: "", //邮箱
         gender: 1, //性别
         autograph: "", //签名
         avatar_id: "", //头像ID
-        avatar_url: "", //头像路径
+        Photo: "", //头像路径
+        Id:""
       },
 
       //验证规则
       rules: {
-        nickname: [
+        Account: [
           { required: true, message: "请输入用户名", trigger: "blur" },
           {
             min: 1,
@@ -146,7 +148,7 @@ export default {
             trigger: "blur",
           },
         ],
-        mailbox: [
+        Email: [
           { required: true, message: "请输入邮箱", trigger: "blur" },
           {
             pattern:
@@ -154,14 +156,7 @@ export default {
             message: "请正确输入邮箱格式",
             trigger: "blur",
           },
-        ],
-        telephone: [
-          {
-            pattern: /^1[3|4|5|7|8][0-9]{9}$/,
-            message: "请正确输入手机格式",
-            trigger: "blur",
-          },
-        ],
+        ]
       },
 
       //性别下来框
@@ -191,8 +186,18 @@ export default {
 
   methods: {
     async init() {
-      const data = await getBlogUserInfo();
-      this.userForm = data.data;
+      const data = this.$store.getters.userInfo;
+      console.log(data)
+      this.userForm.Account = data.Account;
+      this.userForm.Name = data.Name;
+      this.userForm.Email = data.Email;
+
+      //this.userForm.gender = data.Name;
+      //this.userForm.avatar_id = data.Name;
+      this.userForm.Photo = data.Photo;
+            this.userForm.Id = data.Id;
+
+
     },
     /* 保存数据 */
     saveData() {
@@ -201,8 +206,10 @@ export default {
         if (validate) {
           //浅克隆数据
           const data = Object.assign({}, this.userForm);
-          updateBlogUserInfo(data).then((res) => {
-            if (res.code == 200) {
+          console.log(data)
+          // this.userForm.EmpAccount = 'Test'
+          UserService.UpdateUser(this.userForm).then((res) => {
+            if (res.Code == 200) {
               this.init();
               this.btnLoading = false;
               this.$notify({
@@ -212,6 +219,17 @@ export default {
               });
             }
           });
+          // updateBlogUserInfo(data).then((res) => {
+          //   if (res.code == 200) {
+          //     this.init();
+          //     this.btnLoading = false;
+          //     this.$notify({
+          //       title: "修改成功！",
+          //       message: `你的信息已经修改成功咯！`,
+          //       type: "success",
+          //     });
+          //   }
+          // });
         } else {
           this.btnLoading = false;
           return fasle;
@@ -221,9 +239,10 @@ export default {
 
     //头像上传成后
     handleAvatarSuccess(response) {
-      if (response.code == 200) {
-        this.userForm.avatar_id = response.data.id;
-        this.userForm.avatar_url = response.data.img_path;
+      if (response.Code == 200) {
+        //this.userForm.avatar_id = response.data;
+        this.userForm.Photo = response.Data;
+        console.log( this.userForm.Photo)
         this.$notify({
           title: "头像上传成功",
           message: "你的头像已经上传成功，记得点击保存按钮哦！",
@@ -256,13 +275,13 @@ export default {
   computed: {
     // 动态拼接上传路径
     action() {
-      return baseSetting.baseURL + baseSetting.uploadImgUrl;
+      return process.env.VUE_APP_API_URL + '/User/UPLoadPhoto';
     },
 
     // 设置请求头参数 token
     headers() {
       return {
-        Authorization: this.$store.getters.token,
+        Authorization:"Bearer "+ this.$store.getters.token,
       };
     },
   },

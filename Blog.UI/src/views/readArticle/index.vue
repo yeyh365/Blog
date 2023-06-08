@@ -36,7 +36,7 @@
             <h4>{{ UserInfo.Name}}</h4> 
             <!-- <p>发布于 {{ $utils.getPastTimes(articleData.Created) }}</p>  -->
           </div>
-          <div class="user-follow">
+          <!-- <div class="user-follow">
             <el-button
               size="mini"
               style="background: #fff1f4; border-color: #fff1f4"
@@ -48,8 +48,8 @@
             ><span v-if="articleData.IsFollow"> 已关注</span>
               <span v-else>关注</span>
             </el-button>
-          </div>
-        </div>
+          </div> -->
+        </div> 
         <div class="article-data">
           <a
             href="#article-comment"
@@ -88,7 +88,7 @@
         <div class="user-name">
            <h4 style="color:#66B1FF"><span @click.stop="toUserInfo(articleData.UserInfo)">{{ UserInfo.Name }}</span> <span class="article-time">发布于 </span> </h4>
         </div>
-        <div class="user-follow">
+        <!-- <div class="user-follow">
           <el-button
             size="mini"
             style="background: #fff1f4; border-color: #fff1f4"
@@ -100,7 +100,7 @@
           ><span v-if="articleData.IsFollow"> 已关注</span>
             <span v-else>关注</span>
           </el-button>
-        </div>
+        </div> -->
       </div>
       <!-- 文章内容 -->
       <div class="article-container">
@@ -222,8 +222,9 @@
         id="article-comment"
       >
         <comment
-          :avatar="$utils.imgUrl(userInfo.avatar_url)"
-          :authorId="userInfo.id"
+          ref="refcomment"
+          :avatar="UserInfo.Photo"
+          :authorId="UserInfo.Id"
           :label="'作者'"
           :commentNum="commentNum"
           :commentList="commentList"
@@ -310,11 +311,11 @@ export default {
       timer: "",
 
       //当前用户信息
-      userInfo: {
-        id: 0,
-        avatar_url:
-          "uploads/admin/1/images/2021/08/18/462d9a7f1bc5909f111f230cdeaf78bc.jpg",
-      },
+      // userInfo: {
+      //   id: 0,
+      //   avatar_url:
+      //     "uploads/admin/1/images/2021/08/18/462d9a7f1bc5909f111f230cdeaf78bc.jpg",
+      // },
 
       //文章链接
       articleLink: "",
@@ -333,7 +334,12 @@ export default {
       UserInfo:{
         Name:'',
         Photo:'',
-        Id:''
+        Id:0
+      },
+      LgoinUserInfo:{
+        Name:'',
+        Photo:'',
+        Id:0
       },
       Interaction:{
         TypeName:'',
@@ -346,9 +352,12 @@ export default {
   },
   created() {
     if (this.$store.getters.userInfo) {
-      this.userInfo = this.$store.getters.userInfo.user;
+      this.LgoinUserInfo.Name= this.$store.getters.userInfo.Name;
+      this.LgoinUserInfo.Photo= this.$store.getters.userInfo.Photo;
+      this.LgoinUserInfo.Id= this.$store.getters.userInfo.Id;
+      
     } else {
-      this.userInfo.id = 0;
+      this.UserInfo.Id = 0;
     }
 
     this.articleId = this.$route.query.Id;
@@ -356,10 +365,10 @@ export default {
   },
   methods: {
     init() {
-    ArticleService.GetArticleInfo(this.articleId,1).then((res) => {
+    ArticleService.GetArticleInfo(this.articleId,this.UserInfo.Id).then((res) => {
         console.log('111',res.Data.UserInfo.Photo)
                 this.articleData = Object.assign({}, res.Data);
-         if (this.articleData.UserId != this.userInfo.id) {
+         if (this.articleData.UserId != this.UserInfo.Id) {
           this.isAuthor = false;
         } else {
           this.isAuthor = true;
@@ -368,8 +377,8 @@ export default {
         this.articleLink = window.location.href;
         // return;
         //阅读时间为5秒
-        if (this.articleData.UserId != this.userInfo.id) {
-          this.timer = setTimeout(this.reading, 5000);
+        if (this.articleData.UserId != this.UserInfo.Id) {
+          this.timer = setTimeout(this.reading, 8000);
         }
       //   if (status) {
       //     this.articleList = Object.assign([], res.Data);
@@ -389,12 +398,8 @@ export default {
          this.UserInfo.Id =this.articleData.UserInfo.Id
          this.Interaction.ArticleId=this.articleData.Id
          
-      }),
-      ArticleService.GetArticleComment(this.articleId).then((res) => {
-        console.log('111',res)
-        this.commentList = Object.assign([], res.Data);
-        this.commentNum = res.Total;
       })
+      this.GetArticleComment()
       //页面初始化 获取除文章评论外所有的数据
       //readArticleContent({ articleId: 61 }).then((res) => {
         // this.articleData = Object.assign({}, res.data);
@@ -473,7 +478,14 @@ export default {
         // }
      // });
     },
-
+    GetArticleComment(){
+ ArticleService.GetArticleComment(this.articleId).then((res) => {
+        console.log('111',res)
+        this.commentList = Object.assign([], res.Data);
+        this.commentNum = res.Total;
+      })
+    },
+     
     /**
      * 获取评论条数
      */
@@ -496,21 +508,34 @@ export default {
         return;
       }
       const data = {
-        parent_id: 0,
-        user_id: this.userInfo.id,
-        reply_id: 0,
-        content,
-        article_id: this.articleId,
+        //parent_id: 0,//父级ID
+        FromUserId: this.LgoinUserInfo.Id,
+        ReplyUserId: 0,
+        Content:content,
+        ArticleId: this.articleId,
       };
-      sendArticleComment(data).then((res) => {
-        if (res.code == 200) {
+      ArticleService.CreateArticleComment(data).then((res) => {
+        this.followBtnLoading = false;
+        console.log(res)
+        if (res.Code == 200) {
           this.$notify({
             title: "评论提交成功",
-            message: "你的评论管理员将在客服审核后给予你回复",
+            message: "你的评论稍后展示",
             type: "success",
           });
+         this.GetArticleComment()
+         this.$refs.refcomment.cancelAll()
         }
-      });
+      })
+      // sendArticleComment(data).then((res) => {
+      //   if (res.code == 200) {
+      //     this.$notify({
+      //       title: "评论提交成功",
+      //       message: "你的评论管理员将在客服审核后给予你回复",
+      //       type: "success",
+      //     });
+      //   }
+      // });
     },
 
     /**
@@ -518,25 +543,38 @@ export default {
      */
     doChidSend(item) {
       const data = {
-        content: item[0], //文章内容
-        reply_id: item[1], //回复ID
-        parent_id: item[2], //父级ID
-        user_id: this.userInfo.id, //评论者ID
-        article_id: this.articleId, //文章ID
+        Content: item[0], //文章内容
+        ReplyUserId: item[1], //回复ID
+        ConParentkey: item[2], //父级ID
+        FromUserId: this.LgoinUserInfo.Id, //评论者ID
+        ArticleId: this.articleId, //文章ID
       };
       if (data.content == "") {
         this.$message.error("请输入评论的内容");
         return;
       }
-      sendArticleComment(data).then((res) => {
+            ArticleService.CreateChildComment(data).then((res) => {
+        this.followBtnLoading = false;
+        console.log(res)
         if (res.Code == 200) {
           this.$notify({
             title: "评论提交成功",
-            message: "你的评论管理员将在客服审核后给予你回复",
+            message: "你的评论稍后展示",
             type: "success",
           });
+        this.GetArticleComment()
+                 this.$refs.refcomment.cancelAll()
         }
-      });
+      })
+      // sendArticleComment(data).then((res) => {
+      //   if (res.Code == 200) {
+      //     this.$notify({
+      //       title: "评论提交成功",
+      //       message: "你的评论管理员将在客服审核后给予你回复",
+      //       type: "success",
+      //     });
+      //   }
+      // });
     },
 
     /**
@@ -553,7 +591,7 @@ export default {
            } else {
              this.articleData.ThumbsNum++;
            }
-           this.articleData.ThumbsNum = !this.articleData.IsThumbs;
+           this.articleData.IsThumbs = !this.articleData.IsThumbs;
          }
       })
     //   const data = {
@@ -585,7 +623,7 @@ export default {
            } else {
              this.articleData.CollectionNum++;
            }
-           this.articleData.CollectionNum = !this.articleData.IsCollection;
+           this.articleData.IsCollection = !this.articleData.IsCollection;
          }
       })
       // const data = {

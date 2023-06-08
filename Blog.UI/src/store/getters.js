@@ -19,7 +19,7 @@ const getters = {
     userInfo: state => state.user.info,
 
     //获取用户ID
-    userId: state => state.user.info.user.id,
+    userId: state => state.user.info.Id,
 
     //访客用户ID
     visitorId: state => state.visitor.visitorId,

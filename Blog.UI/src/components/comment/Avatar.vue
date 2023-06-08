@@ -7,7 +7,7 @@
 -->
 <template>
 	<div class="user">
-		<div class="user-img"><img :src="avatar?avatar:require('./img/icon/avatar.jpg')"/></div>
+		<div class="user-img"><img :src="avatar?$utils.imgUrl(avatar):require('./img/icon/avatar.jpg')"/></div>
 	</div>
 </template>
 

@@ -30,7 +30,7 @@
           class="article-item-container"
         >
           <div
-            v-if="item.articleContent"
+            v-if="item.ArticleContent"
             class="article-item"
           >
             <div
@@ -40,7 +40,7 @@
               <img
                 width="100%"
                 height="100%"
-                :src="$utils.imgUrl(item.articleContent.cover_img_url)"
+                :src="$utils.imgUrl(item.CoverImgUrl)"
                 alt=""
               />
             </div>
@@ -48,44 +48,45 @@
               class="article-title"
               @click="toReadArticle(item)"
             >
-              <h4>{{ item.articleContent.article_title }}</h4>
+              <h4>{{ item.ArticleTitle }}</h4>
             </div>
             <div class="article-tage">
               <el-tag
                 size="mini"
                 effect="dark"
                 class="item-tag"
+                v-for="(value, key) in item.Classification"
               ><i class="el-icon-folder-opened"></i>
-                {{ item.articleContent.getArticleClassification.classification_name }}</el-tag>
+                {{ value.TypeName }}</el-tag>
               <el-tag
                 size="mini"
                 type="success"
                 effect="dark"
                 class="item-tag"
-                v-for="(value, key) in item.articleContent.special"
+                v-for="(value, key) in item.Special"
               ><i class="el-icon-collection-tag"></i>
-                {{ value.special_name }}</el-tag>
+                {{ value.TypeName }}</el-tag>
               <el-tag
                 size="mini"
                 type="info"
                 class="item-tag"
-                v-for="(value, key) in item.articleContent.label"
-              ><i class="el-icon-s-flag"></i>{{ value.label_name }}</el-tag>
+                v-for="(value, key) in item.Label"
+              ><i class="el-icon-s-flag"></i>{{ value.TypeName }}</el-tag>
             </div>
             <div class="article-time">
               <div class="time">
                 <span>{{
-                $utils.getPastTimes(item.articleContent.create_time)
+                $utils.getPastTimes(item.Created)
               }}</span>
               </div>
               <div class="other">
-                <span class="other-item"><i class="el-icon-chat-dot-square"></i> {{item.articleContent.articleCommentNum}}</span>
+                <!-- <span class="other-item"><i class="el-icon-chat-dot-square"></i> {{item.CollectionNum}}</span> -->
                 <span class="other-item"><i class="el-icon-view"></i>
-                  {{ item.articleContent.browse_num }}</span>
+                  {{ item.BrowseNumCount }}</span>
                 <span class="other-item"><i class="el-icon-star-off"></i>
-                  {{ item.articleContent.thumbs_num }}</span>
+                  {{ item.ThumbsNum }}</span>
                 <span class="other-item"><i class="el-icon-collection-tag"></i>
-                  {{ item.articleContent.collection_num }}</span>
+                  {{ item.CollectionNum }}</span>
                 <!-- <el-dropdown
                 style="margin-left: 20px"
                 size="mini"
@@ -148,9 +149,9 @@
           <el-pagination
             background
             layout="prev, pager, next"
-            :total="filterForm.total"
-            :page-size='filterForm.list_rows'
-            :current-page='filterForm.page'
+            :Total="filterForm.Total"
+            :Page-size='filterForm.Limit'
+            :current-Page='filterForm.Page'
             @current-change='currentChange'
             small
           >
@@ -164,6 +165,8 @@
 <script>
 import { getUserArticleCollection } from "@/api/article/articleList";
 import { changArticleCollection } from "@/api/article/recommendArticle";
+import { getArticleReleaseOption } from "@/api/article/releaseArticle";
+import ArticleService from '@/api/services/ArticleService'
 export default {
   name: "Collection",
   data() {
@@ -179,9 +182,9 @@ export default {
 
       //分页
       filterForm: {
-        list_rows: 8,
-        page: 1,
-        total: 0,
+        Limit: 8,
+        Page: 1,
+        Total: 0,
       },
 
       // 获取更多按钮加载状态
@@ -199,29 +202,51 @@ export default {
     init(type = true) {
       //数据初始化
       const query = {
-        userId: this.userId,
+        UserId: this.userId,
         ...this.filterForm,
+        Interaction:'Collection'
       };
-      getUserArticleCollection(query).then((res) => {
-        if (type) {
-          this.articleList = Object.assign([], res.data.data);
+            ArticleService.GetArticleList(query).then(res=>{
+                if (type) {
+          this.articleList = Object.assign([], res.Data);
+          console.log('this.articleList',this.articleList)
         } else {
-          this.articleList = this.articleList.concat(res.data.data);
+          this.articleList = this.articleList.concat(res.Data);
 
           // 控制获取更改按钮显示
-
+          console.log('this.articleList',this.articleList.length)
           this.loading = false;
         }
-        this.filterForm.total = res.data.total;
+        this.filterForm.Total = res.Total;
         if (
-          this.filterForm.total <
-          this.filterForm.list_rows * this.filterForm.page
+          this.filterForm.Total <
+          this.filterForm.Limit * this.filterForm.Page
         ) {
           this.showGetMoreBtn = false;
         } else {
           this.showGetMoreBtn = true;
         }
-      });
+      })
+      // getUserArticleCollection(query).then((res) => {
+      //   if (type) {
+      //     this.articleList = Object.assign([], res.data.data);
+      //   } else {
+      //     this.articleList = this.articleList.concat(res.data.data);
+
+      //     // 控制获取更改按钮显示
+
+      //     this.loading = false;
+      //   }
+      //   this.filterForm.Total = res.data.Total;
+      //   if (
+      //     this.filterForm.Total <
+      //     this.filterForm.Limit * this.filterForm.Page
+      //   ) {
+      //     this.showGetMoreBtn = false;
+      //   } else {
+      //     this.showGetMoreBtn = true;
+      //   }
+      // });
     },
 
     //取消收藏
@@ -249,15 +274,15 @@ export default {
     },
 
     //分页切换
-    currentChange(page) {
-      this.filterForm.page = page;
+    currentChange(Page) {
+      this.filterForm.Page = Page;
       this.init();
     },
 
     // 获取更多
     getMore() {
       this.loading = true;
-      this.filterForm.page++;
+      this.filterForm.Page++;
       this.init(false);
     },
   },

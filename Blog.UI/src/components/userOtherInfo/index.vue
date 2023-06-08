@@ -10,7 +10,7 @@
     <div class="other-item">
       <el-tooltip
         effect="dark"
-        :content="otherInfo.articleNum.label"
+        content="已发文章"
         placement="bottom"
       >
         <el-tag
@@ -20,13 +20,13 @@
           effect="dark"
           @click="toArticleRelease"
         >
-          {{ otherInfo.articleNum.value }}</el-tag>
+          {{ otherInfo.ArticleNum }}</el-tag>
       </el-tooltip>
     </div>
     <div class="other-item">
       <el-tooltip
         effect="dark"
-        :content="otherInfo.articleFollowNum.label"
+        content="收藏文章"
         placement="bottom"
       >
         <el-tag
@@ -36,13 +36,13 @@
           effect="dark"
           @click="toArticleFollow"
         >
-          {{ otherInfo.articleFollowNum.value }}</el-tag>
+          {{ otherInfo.CollectionNum }}</el-tag>
       </el-tooltip>
     </div>
     <div class="other-item">
       <el-tooltip
         effect="dark"
-        :content="otherInfo.material.label"
+        content="资源"
         placement="bottom"
       >
         <el-tag
@@ -52,13 +52,13 @@
           effect="dark"
           @click="toMaterialRecommend"
         >
-          {{ otherInfo.material.value }}</el-tag>
+          {{ otherInfo.MaterialNum }}</el-tag>
       </el-tooltip>
     </div>
     <div class="other-item">
       <el-tooltip
         effect="dark"
-        :content="otherInfo.followNum.label"
+        content="关注"
         placement="bottom"
       >
         <el-tag
@@ -68,13 +68,13 @@
           effect="dark"
           @click="toUserFollow(true)"
         >
-          {{ otherInfo.followNum.value }}</el-tag>
+          {{ otherInfo.FollowNum }}</el-tag>
       </el-tooltip>
     </div>
     <div class="other-item">
       <el-tooltip
         effect="dark"
-        :content="otherInfo.fansNum.label"
+        content="粉丝"
         placement="bottom"
       >
         <el-tag
@@ -84,7 +84,7 @@
           effect="dark"
           @click="toUserFollow(false)"
         >
-          {{ otherInfo.fansNum.value }}</el-tag>
+          {{ otherInfo.FansNum }}</el-tag>
       </el-tooltip>
     </div>
   </div>

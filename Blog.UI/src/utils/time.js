@@ -15,7 +15,7 @@
  * @return {*}
  */
 export function getPastTimes(time = getCurrentTime()) {
-
+    //time=formatDateTime(time)
     // 兼容mac ios
     let changeTime = time.slice(0, 10) + 'T' + time.slice(11);
 
@@ -43,7 +43,18 @@ export function getPastTimes(time = getCurrentTime()) {
     }
     return resultTime
 }
-
+// 转换后台传过来带T的日期(新方法，之后有用到用新方法)
+export function formatDateTime (date) {
+    if (date !== null && date !== '' && date !== undefined) {
+      const newDate = new Date(date)
+      return new Date(newDate.getTime() + 8 * 3600 * 1000)
+        .toISOString()
+        .replace(/T/g, ' ')
+        .replace(/\.[\d]{3}Z/, '')
+    } else {
+      return ''
+    }
+  }
 /**
  * @Description: 获取当前时间 格式:yyyy-MM-dd HH:MM:SS 
  * @Author: Yerik

@@ -19,15 +19,15 @@
           @click.native="toFindResources(item)"
         >
           <div class='swiper-item'> <img
-              :src='$utils.imgUrl(item.banner_url)'
+              :src='$utils.imgUrl(item.BannerUrl)'
               style="width:100%;"
               :style="{height:$utils.isMobile()?'200px':'300px'}"
             />
             <div class='item-title'>
-              <h4>{{item.banner_name}}</h4>
+              <h4>{{item.BannerName}}</h4>
             </div>
             <div class='item-describe'>
-              <span>{{item.describe}}</span>
+              <span>{{item.Describe}}</span>
             </div>
 
           </div>
@@ -98,22 +98,22 @@ export default {
     //去发现资源
     toFindResources(item) {
       //外链
-      if (item.is_link == 1) {
-        window.open(item.link_url);
+      if (item.IsLink == 1) {
+        window.open(item.LinkUrl);
       } else {
         //文章0 资源 1
-        if (item.is_material == 0) {
+        if (item.IsMaterial == 0) {
           this.$router.push({
             name: "ReadArticle",
             query: {
-              id: item.quote_id,
+              Id: item.QuoteId,
             },
           });
         } else {
           this.$router.push({
             name: "MaterialDetails",
             query: {
-              id: item.quote_id,
+              Id: item.QuoteId,
             },
           });
         }
@@ -123,6 +123,7 @@ export default {
 
   computed: {
     getImg() {
+      console.log('IMGS',this.imgs)
       return this.imgs;
     },
   },

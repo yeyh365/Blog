@@ -105,3 +105,5 @@ E:\blog\Blog.API\Blog.API\obj\Release\net6.0\refint\Blog.API.dll
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\Blog.API.pdb
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\Blog.API.genruntimeconfig.cache
 E:\blog\Blog.API\Blog.API\obj\Release\net6.0\ref\Blog.API.dll
+E:\blog\Blog.API\Blog.API\bin\Release\net6.0\Pipelines.Sockets.Unofficial.dll
+E:\blog\Blog.API\Blog.API\bin\Release\net6.0\StackExchange.Redis.dll
