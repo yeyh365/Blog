@@ -240,9 +240,9 @@ export default {
       HomeService.GetRecommendInfo().then(res=>{
          this.bannerList = Object.assign([], res.Data);
       })
-      getBannerList().then((res) => {
-        this.bannerList = Object.assign([], res.data);
-      });
+      // getBannerList().then((res) => {
+      //   this.bannerList = Object.assign([], res.data);
+      // });
       //获取资源分类
       MaterialService.GetMaterialTypeList().then((res) => {
        this.materialTypeList = Object.assign([], res.Data);

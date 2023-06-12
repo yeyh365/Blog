@@ -63,8 +63,9 @@
                   @click="addMaterialLinkNum()"
                 ><i
                     class='el-icon-star-on icon'
-                    v-if="isCollection"
-                  ></i><i
+                    v-if="IsLike"
+                  ></i>
+                  <i
                     class="el-icon-star-off icon"
                     v-else
                   ></i><span>{{materialData.LikeNum}}</span></el-tag>
@@ -85,6 +86,7 @@
             <div class='type'>
               <el-tag
                 v-for="(item,index) in materialData.Keywords"
+                :key="index"
                 size='small'
                 effect="plain"
                 class="type-item"
@@ -190,6 +192,8 @@ import {
 } from "@/api/material/materialRecommend";
 import MaterialService from '@/api/services/MaterialService'
 import ArticleService from '@/api/services/ArticleService'
+import InteractionService from '@/api/services/InteractionService'
+
 export default {
   name: "MaterialDetails",
   data() {
@@ -209,7 +213,7 @@ export default {
       timer: null,
 
       //判断用户是否关注
-      isCollection: false,
+      IsLike: false,
 
       // 判断是否有数据
       haveDate: false,
@@ -233,18 +237,17 @@ export default {
   methods: {
     //数据初始化
     init() {
-      console.log(this.imgUrl)
-      this.isCollection = false;
+      //console.log(this.imgUrl)
        MaterialService.GetMaterialInfo(this.materialId).then((res) => {
         console.log(res.Data)
-                 if (res.Data) {
+          if (res.Data) {
           this.materialData = Object.assign({}, res.Data);
           this.Interaction.ArticleId=this.materialData.Id
           this.haveDate = true;
           this.timer = setTimeout(() => {
                   this.Interaction.TypeName='BrowseMaterial'
                   this.Interaction.Status=true
-      console.log(this.Interaction)
+                  console.log(this.Interaction)
         ArticleService.CreateInteraction(this.Interaction).then((res) => {
         if (res.Code == 200) {
           this.materialData.BrowseNum++;
@@ -261,9 +264,19 @@ export default {
               userId: this.$store.getters.UserId,
             };
             // hasCollection(query).then((res) => {
-            //   this.isCollection = res.data;
+            //   this.IsLike = res.data;
             // });
           }
+        }
+      })
+      const SearchInfo={
+        TypeName: "LikeMaterial",
+        ArticleId: this.materialId,
+        UserId:this.$store.getters.userId
+      }
+      InteractionService.GetInteractionInfo(SearchInfo).then(res=>{
+        if(res.Code==200){
+          this.IsLike = res.Data.Status;
         }
       })
       // getMaterialDetails({ id: this.materialId }).then((res) => {
@@ -283,7 +296,7 @@ export default {
       //         userId: this.$store.getters.userInfo.user.id,
       //       };
       //       hasCollection(query).then((res) => {
-      //         this.isCollection = res.data;
+      //         this.IsLike = res.data;
       //       });
       //     }
       //   }
@@ -335,6 +348,7 @@ export default {
              this.materialData.LikeNum++;
            }
            this.materialData.IsLike = !this.materialData.IsLike;
+           this.IsLike=!this.IsLike
          }
       })
       // const query = {
@@ -343,12 +357,12 @@ export default {
       //     this.$store.getters.userInfo && this.$store.getters.userInfo.user.id,
       // };
       // addMaterialLike(query).then((res) => {
-      //   if (this.isCollection) {
+      //   if (this.IsLike) {
       //     this.materialData.like_num--;
       //   } else {
       //     this.materialData.like_num++;
       //   }
-      //   this.isCollection = !this.isCollection;
+      //   this.IsLike = !this.IsLike;
       // });
     },
 
@@ -362,7 +376,7 @@ export default {
   computed: {
     //剪切板内容
     conyContainer() {
-      const text = `我在Yerik发现了『 ${this.materialData.material_name} 』,快来看看${this.materialData.material_link}`;
+      const text = `我在Yerik发现了『 ${this.materialData.MaterialName} 』,快来看看${this.materialData.MaterialLink}`;
       return text;
     },
   },

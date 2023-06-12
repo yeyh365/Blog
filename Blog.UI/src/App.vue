@@ -26,15 +26,16 @@
       float
     />
     <!-- 拖拽按钮 -->
-    <div>
+    <!-- <div>
       <DragBtn />
-    </div>
+    </div> -->
     <el-backtop :visibility-height="400"></el-backtop>
 
   </div>
 </template>
 <script>
 import { getMusicList } from "@/api/music/index";
+import DictDataService from"@/api/services/DictDataService"
 import DragBtn from "@/components/DragBtn/index";
 export default {
   name: "App",
@@ -57,6 +58,38 @@ export default {
   },
   methods: {
     init() {
+      const music="Music"
+      DictDataService.dictData(music).then(res=>{
+        //          const tempMusic={
+        //          artist:"",
+        //          cover:"",
+        //          id:"",
+        //          name:"",
+        //          url:""
+        //  }
+        res.Data.forEach((item) => {
+                           const tempMusic={
+                 artist:"",
+                 cover:"",
+                 id:"",
+                 name:"",
+                 url:""
+                 }
+                tempMusic.artist=item.Key
+                tempMusic.cover=this.musicCover
+                tempMusic.id=item.Id
+                tempMusic.name=item.Value
+                tempMusic.url=process.env.VUE_APP_BASE_URL+item.Remark
+               this.audio.push(tempMusic) 
+          // 添加默认音乐播放器图片
+          // if (!item.cover) {
+          //   item.cover = this.musicCover;
+          // }
+        });
+         //this.audio = res.Data;
+         
+        console.log('222',this.audio)
+      })
       getMusicList().then((res) => {
         res.data.forEach((item) => {
           // 添加默认音乐播放器图片
@@ -64,7 +97,8 @@ export default {
             item.cover = this.musicCover;
           }
         });
-        this.audio = res.data;
+        //this.audio = res.data;
+        console.log('111',this.audio)
       });
     },
     onListHide() {},

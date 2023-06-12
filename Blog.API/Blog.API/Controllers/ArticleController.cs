@@ -142,7 +142,7 @@ namespace Blog.WebAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost, Route("CreateInteraction")]
-        public async Task<ResultModel> CreateInteraction(InteractionItme Dto, CancellationToken cancellationToken)
+        public async Task<ResultModel> CreateInteraction(InteractionItem Dto, CancellationToken cancellationToken)
         {
             #region Log日志
             _LogService.CreateLog(_httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString(), "创建互动数据");
@@ -156,7 +156,8 @@ namespace Blog.WebAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost, Route("UpdateInteraction")]
-        public async Task<ResultModel> UpdateInteraction(InteractionItme Dto, CancellationToken cancellationToken)
+        [Authorize]
+        public async Task<ResultModel> UpdateInteraction(InteractionItem Dto, CancellationToken cancellationToken)
         {
             #region Log日志
             _LogService.CreateLog(_httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString(), "更新互动数据");
@@ -170,6 +171,7 @@ namespace Blog.WebAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost, Route("CreateArticleComment")]
+        [Authorize]
         public async Task<ResultModel> CreateArticleComment(CommentItem Dto, CancellationToken cancellationToken)
         {
             #region Log日志
@@ -184,6 +186,7 @@ namespace Blog.WebAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost, Route("CreateChildComment")]
+        [Authorize]
         public async Task<ResultModel> CreateChildComment(CommentItem Dto, CancellationToken cancellationToken)
         {
             #region Log日志

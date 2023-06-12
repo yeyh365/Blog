@@ -1,0 +1,1081 @@
+ 
+ 
+【日志时间】：2023-06-12 13:47:28,354 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:47:29,857 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:47:31,151 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:47:38,743 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:47:40,934 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:47:52,361 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:50:31,982 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:50:50,984 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:52:59,688 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:53:13,883 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:53:43,485 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:53:52,516 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:55:07,768 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:56:59,139 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:57:25,579 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 13:57:35,168 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:00:13,544 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:00:14,840 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:00:21,210 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:00:24,263 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:38,719 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:39,441 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:42,157 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:42,693 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:43,471 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:44,196 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:03:45,496 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:04:41,588 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:05:17,154 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:05:34,666 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:07:08,375 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:07:21,429 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:08,539 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:14,786 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:17,858 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:22,044 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:36,512 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:45,670 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:08:46,413 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:09:44,477 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:10:08,753 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:10:32,517 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:10:38,758 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:14:20,105 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:42:50,515 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:44:07,424 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:46:05,288 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:46:11,355 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:46:22,574 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:46:35,544 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:46:51,899 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:47:31,316 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:49:17,785 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:52:04,173 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:53:15,277 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:54:17,469 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:55:41,480 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:55:42,765 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:55:44,094 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:55:57,553 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:56:38,262 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:57:37,090 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:57:42,883 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:58:05,798 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:58:12,892 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:58:22,997 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:59:06,414 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:59:26,332 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 14:59:39,416 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:00:04,169 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:00:43,843 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:04:44,406 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:06:48,552 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:11:22,707 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:11:38,848 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:11:51,672 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:16:38,926 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:16:41,072 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:16:44,900 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:16:57,753 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:17:16,162 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:17:18,416 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:17:44,162 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:18:32,096 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:18:34,277 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:18:56,922 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:20:18,107 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:20:20,270 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:20:24,274 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:20:40,988 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:21:22,969 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:25:01,048 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:26:07,403 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:27:23,088 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:27:41,732 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:28:05,057 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:31:06,757 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:33:06,520 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:33:06,543 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:34:41,017 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:34:48,361 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:35:05,650 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:35:39,514 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:36:07,945 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:37:06,764 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:41:07,688 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:44:07,130 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:52:48,226 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:54:15,121 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:55:59,856 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:56:12,514 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 15:56:39,794 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:00:32,866 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:02:48,876 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:03:22,203 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:03:41,423 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:05:24,219 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:07:32,668 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:25:24,151 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:25:28,966 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:25:37,446 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:27:02,493 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:27:12,130 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:28:30,416 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:32:08,136 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:32:31,181 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:33:09,006 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:35:38,178 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:40:31,382 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:41:28,112 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:41:34,303 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:44:04,705 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:46:22,659 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:46:39,757 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:47:00,547 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:47:29,088 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:47:56,163 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:48:09,554 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:51:40,585 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:51:49,460 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:52:06,401 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:52:08,193 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:52:19,740 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:53:29,175 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:56:29,002 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:57:33,208 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:57:59,938 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 16:58:26,449 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:02:02,768 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:02:24,283 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:03:12,222 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:03:32,266 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:05:44,889 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:07:24,789 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:09:03,498 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:10:56,794 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:12:51,951 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:13:58,961 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:14:21,187 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:18:49,493 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:20:12,763 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:21:17,369 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:21:28,990 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:21:57,879 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:22:27,936 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:22:57,278 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:24:07,324 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:24:17,391 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:24:39,936 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:24:47,121 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:24:47,242 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:25:06,182 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:25:06,616 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:25:18,711 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:30:29,953 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:30:30,035 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:34:20,953 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:34:25,960 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:41:16,721 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+  
+ 
+【日志时间】：2023-06-12 17:41:16,768 【线程ID】：.NET ThreadPool Worker 
+【日志级别】：WARN  
+【日志对象】：Microsoft.EntityFrameworkCore.Database.Transaction 
+【日志内容】：Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. 
+ 

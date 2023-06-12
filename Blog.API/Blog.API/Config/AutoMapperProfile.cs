@@ -29,8 +29,10 @@ namespace Blog.WebAPI.Config
             CreateMap<Article, ArticleItem>().ReverseMap();
             CreateMap<Comment, CommentDto>().ReverseMap();
             CreateMap<Comment, CommentItem>().ReverseMap();
-            CreateMap<Interaction, InteractionItme>().ReverseMap();
-            
+            CreateMap<Interaction, InteractionItem>().ReverseMap();
+            CreateMap<Interaction, InteractionDto>().ReverseMap();
+
+
 
         }
         /// <summary>

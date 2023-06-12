@@ -92,15 +92,15 @@ namespace Blog.Application.Services
              bannerMaterial.Describe = materialInfo.MaterialDescribe;
               listBanner.Add(bannerMaterial);
             }
-            var article = from m in this._ArticleRepository.GetAll()
+            var article = (from m in this._ArticleRepository.GetAll().ToList()
                            join d in _InteractionRepository.Get(t => t.TypeName == "Thumbs") on m.Id equals d.ArticleId
-                          into bGroup
+                          into aGroup
                            select new
                            {
                                TableAId = m.Id,
-                               BCount = bGroup.Count()
-                           };
-            var articleFirst = material.OrderByDescending(t => t.BCount).FirstOrDefault();
+                               BCount = aGroup.Count()
+                           }).ToList();
+            var articleFirst = article.OrderByDescending(t => t.BCount).FirstOrDefault();
             if (articleFirst != null)
             {
                 var articleInfo = this._ArticleRepository.Get(t => t.Id == articleFirst.TableAId).FirstOrDefault();

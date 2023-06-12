@@ -64,10 +64,10 @@
           <span
             class="other-item"
             @click="changeThumbs()"
-            :class="{ 'thumbs-item': articleData.IsThumbs }"
+            :class="{ 'thumbs-item': InteractionType.isThumbs }"
           ><i
               class="el-icon-star-on"
-              v-if="articleData.IsThumbs"
+              v-if="InteractionType.isThumbs"
             ></i><i
               class="el-icon-star-off"
               v-else
@@ -77,7 +77,7 @@
           <span
             class="other-item"
             @click="changeCollection()"
-            :class="{ 'is-Collection': articleData.IsCollection }"
+            :class="{ 'is-Collection': InteractionType.isCollection }"
           ><i class="el-icon-collection-tag"></i>
             {{ articleData.CollectionNum }}
           </span>
@@ -197,10 +197,10 @@
           <span
             class="other-item"
             @click="changeThumbs()"
-            :class="{ 'thumbs-item': articleData.IsThumbs }"
+            :class="{ 'thumbs-item': InteractionType.isThumbs }"
           ><i
               class="el-icon-star-on"
-              v-if="articleData.IsThumbs"
+              v-if="InteractionType.isThumbs"
             ></i><i
               class="el-icon-star-off"
               v-else
@@ -210,7 +210,7 @@
           <span
             class="other-item"
             @click="changeCollection()"
-            :class="{ 'is-Collection': articleData.isCollection }"
+            :class="{ 'is-Collection': InteractionType.isCollection }"
           ><i class="el-icon-collection-tag"></i>
             {{ articleData.IsCollection }}
           </span>
@@ -254,6 +254,7 @@ import {
 } from "@/api/article/recommendArticle";
 import { blogUserFollowUser } from "@/api/user/followUser";
 import ArticleService from '@/api/services/ArticleService'
+import InteractionService from '@/api/services/InteractionService'
 export default {
   name: "ReadArticle",
   components: {
@@ -294,7 +295,7 @@ export default {
         //是否收藏
         isCollection: false,
 
-        //是否收藏
+        //是否关注
         isFollow: false,
 
         //文章专题
@@ -306,7 +307,16 @@ export default {
         //文章分类
         getArticleClassification: {},
       },
+      InteractionType:{
+        //是否已点赞
+        isThumbs: false,
 
+        //是否收藏
+        isCollection: false,
+
+        //是否关注
+        isFollow: false,
+      },
       //定时器
       timer: "",
 
@@ -366,8 +376,9 @@ export default {
   methods: {
     init() {
     ArticleService.GetArticleInfo(this.articleId,this.UserInfo.Id).then((res) => {
-        console.log('111',res.Data.UserInfo.Photo)
+
                 this.articleData = Object.assign({}, res.Data);
+        console.log('111 this.articleData', this.articleData)
          if (this.articleData.UserId != this.UserInfo.Id) {
           this.isAuthor = false;
         } else {
@@ -399,7 +410,36 @@ export default {
          this.Interaction.ArticleId=this.articleData.Id
          
       })
+      //获取文章评论
       this.GetArticleComment()
+      //获取文章收藏和点赞
+      const CollectionInfo={
+        TypeName:'Collection',
+        ArticleId:this.articleId,
+        UserId:this.LgoinUserInfo.Id
+      }
+InteractionService.GetInteractionInfo(CollectionInfo).then(res=>{
+  if (res.Code==200){
+    if(res.Data){
+      this.InteractionType.isCollection=res.Data.Status
+    }
+
+  }
+})
+ const ThumbsInfo={
+        TypeName:'Thumbs',
+        ArticleId:this.articleId,
+        UserId:this.LgoinUserInfo.Id
+      }
+      InteractionService.GetInteractionInfo(ThumbsInfo).then(res=>{
+  if (res.Code==200){
+    if(res.Data){
+      this.InteractionType.isThumbs=res.Data.Status
+      console.log('this.articleData',this.articleData)
+    }
+      
+  }
+})
       //页面初始化 获取除文章评论外所有的数据
       //readArticleContent({ articleId: 61 }).then((res) => {
         // this.articleData = Object.assign({}, res.data);
@@ -479,10 +519,10 @@ export default {
      // });
     },
     GetArticleComment(){
- ArticleService.GetArticleComment(this.articleId).then((res) => {
-        console.log('111',res)
+        ArticleService.GetArticleComment(this.articleId).then((res) => {
         this.commentList = Object.assign([], res.Data);
         this.commentNum = res.Total;
+                console.log('111',this.commentList)
       })
     },
      
@@ -591,7 +631,7 @@ export default {
            } else {
              this.articleData.ThumbsNum++;
            }
-           this.articleData.IsThumbs = !this.articleData.IsThumbs;
+           this.InteractionType.isThumbs = !this.InteractionType.isThumbs;
          }
       })
     //   const data = {
@@ -618,12 +658,12 @@ export default {
         console.log(this.Interaction)
         ArticleService.UpdateInteraction(this.Interaction).then((res) => {
          if (res.Code == 200) {
-           if (this.articleData.IsCollection) {
+           if (this.articleData.CollectionNum) {
              this.articleData.CollectionNum--;
            } else {
              this.articleData.CollectionNum++;
            }
-           this.articleData.IsCollection = !this.articleData.IsCollection;
+           this.InteractionType.isCollection = !this.InteractionType.isCollection;
          }
       })
       // const data = {

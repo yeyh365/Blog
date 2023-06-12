@@ -288,8 +288,10 @@ export default {
       await this.$refs.md.uploadMdImgs();
       this.$refs.md.save();
             const data = Object.assign({}, this.articleForm);
-      data.Status = 0;
-      data.IsAppeal = 0;
+         data.Status = 0;
+         data.IsAppeal = 0;
+         data.UserId=this.$store.getters.userId
+         console.log('CreateArticle',data)
              ArticleService.CreateArticle(data).then(res=>{
                 if (res) {
           this.articleForm.ArticleTitle = "";

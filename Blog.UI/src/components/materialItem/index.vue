@@ -59,7 +59,7 @@ export default {
       this.$router.push({
         path: "/materialDetails",
         query: {
-          id: this.materialData.Id,
+          Id: this.materialData.Id,
         },
       });
     },

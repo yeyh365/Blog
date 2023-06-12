@@ -401,7 +401,7 @@ namespace Blog.Application.Services.Impl
         /// <param name="Id">学员ID</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ResultModel> CreateInteraction(InteractionItme Item, CancellationToken cancellationToken)
+        public async Task<ResultModel> CreateInteraction(InteractionItem Item, CancellationToken cancellationToken)
         {
             ResultModel result = new ResultModel();
             var DataModel = _mapper.Map<Interaction>(Item);
@@ -421,10 +421,10 @@ namespace Blog.Application.Services.Impl
         /// <param name="Dto">文章信息</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ResultModel> UpdateInteraction(InteractionItme Item, CancellationToken cancellationToken)
+        public async Task<ResultModel> UpdateInteraction(InteractionItem Item, CancellationToken cancellationToken)
         {
             ResultModel result = new ResultModel();
-            var resultInteraction = await _InteractionRepository.Get(t => t.TypeName == Item.TypeName && t.UserId == Item.UserId).FirstOrDefaultAsync(cancellationToken);
+            var resultInteraction = await _InteractionRepository.Get(t => t.TypeName == Item.TypeName &&t.ArticleId==Item.ArticleId&& t.UserId == Item.UserId).FirstOrDefaultAsync(cancellationToken);
             if (Item.AttentionUserId > 0)
             {
                 resultInteraction = await _InteractionRepository.Get(t => t.TypeName == Item.TypeName && t.UserId == Item.UserId && t.AttentionUserId == Item.AttentionUserId).FirstOrDefaultAsync(cancellationToken);

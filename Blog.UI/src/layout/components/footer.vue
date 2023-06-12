@@ -47,8 +47,7 @@
           <div class="blog-link">
             <div>
               <div class="copyright">
-                <p>
-                  Copyright © 2022 Yerik. All Right Reserved. ·
+                <p style="width:300px;margin-left:40%">
                   蜀ICP备2023004978号
                 </p>
                    <p>
@@ -61,11 +60,11 @@
                 </p>
               </div>
               <div class="icon-container">
-                <svg-icon
-                  icon-class="QQ"
+                <!-- <svg-icon
+                  icon-class="officialAccount"
                   class="svg-icon"
                   @click="toQQ"
-                />
+                /> -->
                 <el-popover
                   placement="top"
                   width="100"
@@ -93,7 +92,7 @@
                     alt=""
                   />
                   <svg-icon
-                    icon-class="officialAccount"
+                    icon-class="QQ"
                     class="svg-icon"
                     slot="reference"
                   />

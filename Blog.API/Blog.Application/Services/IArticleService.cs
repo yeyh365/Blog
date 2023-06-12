@@ -68,8 +68,8 @@ namespace Blog.Application.Services
         #region Extend
         Task<ResultModel> GetArticleType(CancellationToken cancellationToken);
 
-        Task<ResultModel> CreateInteraction(InteractionItme Itme, CancellationToken cancellationToken);
-        Task<ResultModel> UpdateInteraction(InteractionItme Itme, CancellationToken cancellationToken);
+        Task<ResultModel> CreateInteraction(InteractionItem Itme, CancellationToken cancellationToken);
+        Task<ResultModel> UpdateInteraction(InteractionItem Itme, CancellationToken cancellationToken);
         /// <summary>
         /// 增加一个文章评论
         /// </summary>

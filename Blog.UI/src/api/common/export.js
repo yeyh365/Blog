@@ -51,6 +51,7 @@ axiosInstance.interceptors.response.use(
     if (error.response) {
       switch (error.response.status) {
         case 401:
+          alert("请登录后操作")
           //router.replace({ name: '404' })
           break
         case 403:
